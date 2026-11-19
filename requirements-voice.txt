@@ -1,4 +1,5 @@
 -r requirements.txt
 openai-whisper
-PyAudio
-pygame
+transformers==5.23.0
+silero-vad
+sounddevice

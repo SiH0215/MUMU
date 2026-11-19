@@ -1,0 +1,4 @@
+-r requirements.txt
+Flask>=3.1,<4
+langchain-huggingface>=1,<2
+sentence-transformers>=5,<6

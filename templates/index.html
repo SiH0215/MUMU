@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>M.U.M.U.</title>
+  <link rel="icon" href="{{ url_for('static', filename='mumu/web_icon.png') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='mumu.css', v=asset_version) }}">
+  <script defer src="{{ url_for('static', filename='mumu.js', v=asset_version) }}"></script>
+</head>
+<body>
+  <main class="app">
+    <section class="home" id="home">
+      <h1><img class="wordmark" src="{{ url_for('static', filename='mumu/maintitle.png') }}" alt="M.U.M.U."></h1>
+      <img class="home-mascot" src="{{ url_for('static', filename='mumu/mascot.png') }}" alt="">
+      <nav class="home-menu" aria-label="무무 메뉴">
+        <button type="button" id="open-chat" class="home-action">
+          <img src="{{ url_for('static', filename='mumu/btn_chat.png') }}" alt="이야기">
+        </button>
+        <button type="button" id="open-diary" class="home-action" aria-haspopup="dialog">
+          <img src="{{ url_for('static', filename='mumu/btn_story.png') }}" alt="일기장">
+        </button>
+      </nav>
+      <div id="home-error" class="home-error" hidden>
+        <p id="home-error-text" class="error" role="alert"></p>
+        <button type="button" class="retry-memory" id="retry-memory" hidden>대화 기록 다시 저장</button>
+      </div>
+    </section>
+
+    <section class="chat" id="chat" hidden>
+      <header class="chat-header">
+        <button type="button" id="back" class="back" aria-label="홈으로 돌아가기">←</button>
+        <h1 id="chat-heading" tabindex="-1">이야기</h1>
+      </header>
+
+      <div class="conversation" id="conversation" tabindex="0" aria-label="무무와의 대화">
+        <div class="welcome" id="welcome">
+          <img src="{{ url_for('static', filename='mumu/mascot.png') }}" alt="">
+          <p>오늘 무슨 이야기를 해볼까?</p>
+        </div>
+        <ol id="messages" class="message-list" aria-live="polite" aria-relevant="additions"></ol>
+        <ol id="reply-preview" class="message-list" aria-label="무무가 답변하는 중" aria-busy="true" hidden></ol>
+      </div>
+
+      <footer class="controls">
+        <div class="status" role="status"><span id="mic-light" class="mic-light"></span><span id="status">메시지를 쓰거나 마이크를 켜서 이야기해요.</span></div>
+        <p id="error" class="error" role="alert" hidden></p>
+        <form id="composer">
+          <label for="message" class="visually-hidden">메시지</label>
+          <textarea id="message" name="message" rows="2" maxlength="1000" placeholder="무무에게 이야기하기" title="Enter로 전송, Shift+Enter로 줄바꿈" autocomplete="off" required></textarea>
+          <button type="submit" class="send" id="send">보내기</button>
+        </form>
+        <div class="chat-actions">
+          <button type="button" class="microphone" id="microphone" aria-pressed="false">
+            <span class="mic-icon" aria-hidden="true"></span>
+            <span id="mic-label">마이크 켜기</span>
+          </button>
+          <button type="button" class="end-chat" id="end-chat">대화 끝내기</button>
+        </div>
+      </footer>
+    </section>
+
+    <dialog id="memory-dialog" class="memory-dialog" aria-labelledby="memory-heading">
+      <header class="memory-header">
+        <button id="memory-back" type="button" aria-label="일기장 목록으로 돌아가기" hidden>←</button>
+        <h2 id="memory-heading">일기장</h2>
+        <form method="dialog">
+          <button type="submit" autofocus>닫기</button>
+        </form>
+      </header>
+      <div class="memory-pages">
+        <p id="memory-status" role="status"></p>
+        <ol id="memory-list" class="memory-list"></ol>
+        <article id="memory-entry" class="memory-entry" hidden>
+          <time id="memory-entry-date"></time>
+          <div id="memory-content" class="memory-content"></div>
+          <button id="memory-view" type="button" hidden>대화 전문 보기</button>
+          <ol id="memory-transcript" class="message-list" aria-label="저장된 대화 전문" hidden></ol>
+          <button id="memory-retry" type="button" hidden>다시 시도</button>
+        </article>
+      </div>
+      <img class="memory-animals" src="{{ url_for('static', filename='mumu/diary-animals.png') }}" alt="">
+    </dialog>
+  </main>
+  <dialog id="loading-dialog" class="loading-dialog" aria-labelledby="loading-text" aria-busy="true">
+    <span class="loading-spinner" aria-hidden="true"></span>
+    <p id="loading-text" role="status" tabindex="-1">무무를 준비중이에요...</p>
+  </dialog>
+</body>
+</html>
