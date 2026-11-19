@@ -4,7 +4,7 @@
 
 기존 MUMU는 Whisper로 말을 받아쓰고, IBM watsonx로 답변을 만든 뒤 Supertone으로 읽어주는 음성 챗봇이었습니다. 당시 코드와 설명은 아래 링크에서 확인할 수 있습니다.
 
-[기존 MUMU 코드와 설명 보기](legacy/README.md)
+[MUMU legacy](legacy/README.md)
 
 # MUMU - 대화를 위한 챗봇
 
