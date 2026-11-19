@@ -76,27 +76,40 @@ flowchart TD
 
 **이야기**와 **일기장**으로 들어갈 수 있습니다. 대화를 마치면 기록을 저장한 뒤 이 화면으로 돌아옵니다.
 
-![무무 홈 화면](docs/images/home.jpg)
+<img src="docs/images/home.jpg" alt="무무 홈 화면" width="320">
 
 #### 대화
 
 텍스트나 마이크로 대화합니다. 답변은 도착하는 대로 띄어쓰기 단위로 나타나고, 모두 표시되면 입력창으로 포커스가 돌아옵니다. Enter로 전송하고 Shift+Enter로 줄을 바꿀 수 있습니다.
 
+<img src="docs/images/chat.jpg" alt="무무와 대화하는 화면" width="320">
+
+#### 로딩 팝업
+
 모델을 불러오거나 대화를 정리하는 동안에는 중앙에 로딩 팝업을 띄우고 배경을 흐리게 처리합니다.
 
-![무무와 대화하는 화면](docs/images/chat.jpg)
+<table>
+  <tr>
+    <th>무무 준비 중</th>
+    <th>대화 정리 중</th>
+  </tr>
+  <tr>
+    <td><img src="docs/images/preparing.jpg" alt="무무를 준비하는 로딩 팝업" width="320"></td>
+    <td><img src="docs/images/saving.jpg" alt="대화를 정리하는 로딩 팝업" width="320"></td>
+  </tr>
+</table>
 
 #### 일기
 
 대화가 끝나면 무무가 나눈 이야기를 일기로 정리합니다. 일기장에서는 날짜를 골라 읽을 수 있고, 일기 속 ‘나’는 무무입니다.
 
-![무무의 일기 화면](docs/images/diary.jpg)
+<img src="docs/images/diary.jpg" alt="무무의 일기 화면" width="320">
 
 #### 대화 전문
 
 일기에서 **대화 전문 보기**를 누르면 그때 주고받은 말을 읽기 전용 말풍선으로 다시 확인할 수 있습니다.
 
-![저장된 대화 전문 화면](docs/images/transcript.jpg)
+<img src="docs/images/transcript.jpg" alt="저장된 대화 전문 화면" width="320">
 
 ### 데이터 처리
 
