@@ -1,66 +1,83 @@
-# 코드 설명
+# 해커톤 원본 코드 설명
+
+이 문서는 [original/](../original/)에 보관한 `IBM-hackathon-program/test`의 코드를 기준으로 작성했습니다. 코드의 함수 호출과 저장 흐름을 확인한 내용이며, 당시 외부 서비스의 연결을 재검증한 결과는 아닙니다.
 
 ## 파일 구성
 
-`mumu_legacy.py`는 모듈별 정리본을 하나의 파일로 묶은 통합본. 외부 API와 음성 처리 코드는 함수·클래스 안에 두어 import만으로 API 호출이나 녹음이 실행되지 않음.
+| 파일 | 역할 |
+|---|---|
+| [main.py](../original/main.py) | 이미지 기반 홈 화면. 대화와 일기장으로 이동 |
+| [pages/chat.py](../original/pages/chat.py) | 음성 대화, 말풍선 렌더링, 종료 후 전문·일기 저장 |
+| [pages/diary.py](../original/pages/diary.py) | 일기 파일 목록과 제목 표시 |
+| [pages/read_diary.py](../original/pages/read_diary.py) | 선택한 일기의 제목·본문 열람 |
+| [mumu.py](../original/mumu.py) | 콘솔 음성 대화와 전문·일기 저장 |
+| [mumu_cli.py](../original/mumu_cli.py) | 텍스트 콘솔 대화. 최근 5개 대화 쌍 전달, 전문·일기 저장 |
+| [st_chatbot.py](../original/st_chatbot.py) | 별도로 남아 있는 Streamlit 음성 대화 버전 |
+| [pages/mumu.py](../original/pages/mumu.py) | 콘솔 음성 대화 코드. 루트 `mumu.py`와 내용이 동일 |
+| [SYSTEMPROMPT.txt](../original/SYSTEMPROMPT.txt) | 대화 성격과 행동 지침 원본 |
+| [DIARYPROMPT.txt](../original/DIARYPROMPT.txt) | 무무의 1인칭 일기·제목 생성 지침 원본 |
+| [img/](../original/img/) · [pages/img/](../original/pages/img/) | 홈·대화·일기장 이미지. 중복 파일도 원래 위치 그대로 보관 |
+| [더미/](../original/더미/) | STT·TTS 개별 연동과 이전 모델·프롬프트를 시험한 코드 |
 
-| 모듈 | 처리 내용 |
-| --- | --- |
-| `config.py` | 환경변수·시스템 프롬프트 로딩 |
-| `prompting.py` | 모델 입력 구성, 예약 토큰 확인, 응답 후처리 |
-| `conversation.py` | 입력 검증, 성공 대화 이력 관리와 초기화 |
-| `watsonx.py` | SDK 호출과 응답 문자열 추출 |
-| `stt.py` | 로컬 마이크 녹음, Whisper 한국어 인식 |
-| `tts.py` | Supertone 응답 분기와 임시 음성 파일 재생 |
-| `service.py` | 대화 결과와 음성 출력 연결 |
-| `errors.py` | 설정·입력·서비스 오류 구분 |
-| `__main__.py` | 콘솔 명령과 모듈 구성 |
+## 홈과 화면 이동
 
-## 설정
+`main.py`는 홈 이미지를 base64로 바꿔 HTML에 삽입합니다. ‘이야기’와 ‘일기장’ 이미지 링크는 각각 `chat`, `diary` 페이지로 연결됩니다. `import mumu`도 포함되어 있어 홈 코드를 읽는 과정에서 환경변수·프롬프트·watsonx 모델 초기화가 함께 실행되는 구조입니다.
 
-`Settings.from_environment()`는 watsonx API 키·프로젝트 ID·리전 URL 읽기. TTS 키와 보이스 ID는 음성 출력 설정으로 분리. 자격 증명 필드는 설정 객체의 문자열 표현에 노출하지 않음.
+## 음성 대화의 한 턴
 
-`load_system_prompt()`는 프로젝트 루트의 `SYSTEMPROMPT.txt` 또는 지정한 파일 읽기. 파일이 없거나 비어 있으면 설정 오류로 처리. 원본 프롬프트가 없으므로 예시 파일을 자동으로 적용하지 않음.
+`pages/chat.py`에서 ‘대화하기’를 누르면 다음 처리를 반복합니다.
 
-## 프롬프트
+1. `record_audio()`가 PyAudio 입력을 16kHz·모노·16비트로 5초 녹음하고 float32 배열로 변환합니다.
+2. `stt()`가 `whisper.load_model("base")`를 호출하고 `language="ko"`로 전사합니다. 모델 로딩 호출은 매 턴 함수 내부에 있습니다.
+3. 사용자 문장을 `st.session_state.history`에 넣고 말풍선으로 표시합니다.
+4. 종료 문구인지 확인합니다. 일반 발화이면 `chatbot_response()`로 답변을 생성합니다.
+5. 답변을 같은 이력 항목에 넣고 화면에 표시한 뒤 `speak()`로 읽어줍니다.
+6. 음성 재생이 끝나면 다음 녹음으로 돌아갑니다.
 
-`build_prompt()`의 입력 순서는 시스템 지시, 이전 사용자·모델 발화 쌍, 현재 사용자 입력, assistant 헤더임. 보관된 모델 토큰 형식 유지.
+VAD로 말소리의 시작·끝을 판단하는 방식은 없으며, 마이크 입력과 음성 재생은 Streamlit 서버를 실행한 컴퓨터에서 처리합니다.
 
-`contains_reserved_tokens()`는 입력에 정의된 예약 토큰이 있는지 확인. 이 검사는 입력 규칙이며 모든 프롬프트 공격을 방지하는 장치는 아님. `clean_response()`는 `<|eot|>` 이후와 앞뒤 공백 제거.
+## LLM 요청과 대화 이력
 
-## 대화와 모델 호출
+모델 ID는 `meta-llama/llama-4-maverick-17b-128e-instruct-fp8`입니다. 최대 생성 토큰은 900으로 설정하고 `<|eot|>`를 종료 시퀀스로 전달합니다.
 
-`Conversation.reply()`는 빈 입력·예약 토큰을 확인하고 프롬프트 생성. `WatsonxGenerator.generate()`는 `model.generate()`를 호출한 뒤 `results[0].generated_text`를 반환. 응답 구조가 다르거나 호출에 실패하면 서비스 오류로 변환.
+`build_prompt()`는 시스템 프롬프트 → 이전 사용자·무무 발화 → 현재 입력 → assistant 헤더 순서로 문자열을 구성합니다. 응답은 `results[0]['generated_text']`에서 꺼내 `<|eot|>` 이후를 잘라내고, 화면 버전은 ‘무무 >>’, ‘assistant:’ 같은 말머리도 제거합니다.
 
-정상 답변만 사용자 입력과 묶어 성공 이력에 추가. 요청 실패나 빈 답변은 이력에 넣지 않음. 최근 5개 대화 쌍만 유지하고 `clear()`로 이력 초기화. DB나 파일 저장 기능은 없음.
+| 버전 | 다음 답변에 전달하는 기록 |
+|---|---|
+| `pages/chat.py` | 현재 화면 세션에 누적한 이력 |
+| `mumu.py` | 현재 콘솔 대화의 전체 이력 |
+| `mumu_cli.py` | 현재 콘솔 대화 중 최근 5개 쌍 |
+| 재구성본 `mumu/` | 최근 5개 쌍만 내부에 유지 |
 
-보관 소스는 전체 이력을 메모리에 쌓고 요청에 5개만 전달했지만 정리본은 메모리 이력 자체도 5개로 제한. 모델 ID와 프롬프트 형식은 보관 기준이며 다른 모델과의 호환성은 미검증.
+화면 버전은 현재 발화를 이력에 먼저 추가한 뒤, `build_prompt()`에 현재 입력으로도 넘깁니다. 따라서 해당 발화가 요청에 두 번 들어가는 부분이 원본에 남아 있습니다. 보관본에서는 이를 수정하지 않았습니다.
 
-## 음성 인식
+과거 세션의 `log_DB` 파일을 읽어 다음 대화에 넣거나, 임베딩·벡터 검색으로 참조하는 코드는 없습니다.
 
-`record_audio()`는 로컬 마이크를 16kHz·모노·16비트로 5초 녹음하고 임시 WAV 파일 생성. 임시 파일 핸들을 먼저 닫은 뒤 WAV를 작성해 Windows 파일 잠금을 피함. 녹음 종료·실패 시 스트림과 장치 정리.
+## Supertone 합성과 재생
 
-`WhisperTranscriber.transcribe_file()`은 첫 호출 때 Whisper base를 로드하고 재사용. 한국어 인식 결과를 문자열로 반환. `record_and_transcribe()`는 성공·실패와 관계없이 녹음 파일 삭제. 빈 인식 결과는 대화 입력 검증 단계에서 제외.
+`speak()`는 `https://supertoneapi.com/v1/text-to-speech/{VOICE_ID}`로 요청합니다. 한국어, `Sad` 스타일, `sona_speech_1`, WAV 형식, 속도 1.1 설정이 남아 있습니다. 음성 Content-Type 응답을 임시 WAV로 저장한 뒤 pygame으로 재생합니다.
 
-## 음성 합성과 재생
+이 원본 함수에는 요청 타임아웃, 재생 후 임시 파일 삭제, JSON 음성 URL 응답 처리 등이 없습니다. 재구성본에 추가된 예외 처리나 자원 정리는 당시 원본의 기능으로 기술하지 않았습니다.
 
-`SupertoneSynthesizer.synthesize()`는 종료된 음성 서비스의 연동 구조 보존. 요청 본문은 한국어, Sad 스타일, `sona_speech_1`, WAV 출력, 속도 1.1 사용. 이 값은 보관된 환경변수 버전에서 가져온 설정이며 역사적 최종 설정으로 확정한 값은 아님.
+## 대화 종료와 일기 저장
 
-- `audio/*` 응답은 음성 바이트로 반환.
-- JSON 응답은 `audio_url`을 읽어 음성을 다운로드하는 구조.
-- HTTP 오류, 빈 음성, 예상과 다른 응답은 서비스 오류로 처리.
-- 요청에는 제한 시간을 두고 다운로드 URL에는 API 키 헤더를 전달하지 않음.
+종료 문구는 인식된 문자열과 정확히 비교합니다. 화면 버전의 루프가 끝나면 다음 처리를 수행합니다. STT·답변 처리 오류로 루프를 빠져나간 경우에도 이 저장 코드에 도달할 수 있습니다.
 
-`play_audio()`는 임시 WAV를 pygame으로 재생하고 장치와 파일 정리. `ChatService.respond()`는 음성 출력 실패를 별도로 반환하며 성공한 답변 텍스트와 대화 이력 유지.
+1. `get_next_indexed_filename()`이 폴더의 기존 번호를 확인해 다음 파일명을 정합니다.
+2. 전체 세션 이력을 `log_DB/log_번호.txt`에 저장합니다.
+3. `summarize_conversation()`이 일기 프롬프트와 전체 이력을 같은 watsonx 모델에 보냅니다.
+4. 요약 결과를 `diary_DB/diary_번호.txt`에 저장합니다.
 
-## 통합 흐름
+원본 일기 프롬프트는 무무가 ‘나’로, 상대를 ‘너’로 부르며 3~4문장의 일기를 작성하고 마지막 줄에 3단어 이하 제목을 쓰도록 지시합니다. 별도 감정 분류 모델을 실행하는 구조는 아닙니다.
 
-`main()`은 설정·대화·모델·음성 객체를 구성하고 콘솔 입력 수신. `exit`·`quit`은 종료, `/초기화`는 이력 삭제, `/음성`은 음성 입력 경로. 음성 기능은 옵션으로 분리돼 있음.
+## 일기 조회
 
-이 실행부는 개별 보관 코드를 연결해 재구성한 구조. Supertone 서비스 종료로 전체 음성 경로는 실행할 수 없는 상태로 보관. 화면·감정 일기·요약·RAG는 이 코드에 포함하지 않음.
+`pages/diary.py`는 `diary_DB`의 텍스트 파일을 수정 시각의 내림차순으로 정렬합니다. 마지막 3개의 비어 있지 않은 줄에서 ‘제목:’을 찾고, 없으면 마지막 줄을 제목으로 사용합니다.
 
-## 테스트
+`pages/read_diary.py`는 `file` 쿼리의 파일명을 `os.path.basename()`으로 처리해 일기 폴더에서 찾습니다. 제목과 본문을 분리하고 HTML 문자를 이스케이프해 표시합니다. 전문 로그를 말풍선으로 다시 보는 화면은 없습니다.
 
-테스트는 실제 API·마이크·재생 장치를 모의 객체로 대체. 프롬프트 순서, 최근 대화 전달·초기화, 잘못된 입력, 실패·빈 응답, 음성 응답 분기, 장치·임시 파일의 정리 여부 검사. 통합본과 모듈별 정리본의 대화 동작도 비교.
+## 보관 기준
 
-통과 결과는 외부 서비스와 연결되거나 과거 전체 서비스가 재현된다는 의미가 아님.
+원본 소스와 이미지의 내용은 변경하지 않았습니다. 과거 파일의 구문은 외부 API 호출 없이 검사했으며, 자격 증명과 실제 대화·일기는 업로드하지 않았습니다. [SOURCE_MANIFEST.json](../original/SOURCE_MANIFEST.json)의 SHA-256으로 원본과 복사본을 비교할 수 있습니다.
+
+`mumu/`, `mumu_legacy.py`, `tests/`는 별도 재구성본입니다. 해당 테스트 결과와 동작 설명은 [재구성 코드 설명](RECONSTRUCTED_CODE.md)을 참고하세요.

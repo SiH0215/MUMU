@@ -9,3 +9,8 @@ __pycache__/
 *.mp3
 .pytest_cache/
 .test-temp/
+
+# Recovered historical prompt; generated conversations stay local.
+!original/SYSTEMPROMPT.txt
+original/log_DB/
+original/diary_DB/
