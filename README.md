@@ -28,7 +28,7 @@
 |---|---|
 | Flask · HTML/CSS/JavaScript | 대화창, 입력 상태, 답변 표시와 일기장 |
 | Silero VAD · Whisper small | 말소리의 시작과 끝을 감지하고 한국어로 받아쓰기 |
-| LangChain · Gemini | 시스템 프롬프트, 현재 대화 이력과 검색한 기록을 바탕으로 답변 생성 |
+| LangChain · Gemini-3.5-flash-lite | 시스템 프롬프트, 현재 대화 이력과 검색한 기록을 바탕으로 답변 생성 |
 | multilingual-e5-small · SQLite | 로컬 임베딩, 과거 대화 검색, 원문과 일기 저장 |
 
 ### 대화의 흐름
