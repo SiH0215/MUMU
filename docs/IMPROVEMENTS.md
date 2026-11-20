@@ -6,7 +6,7 @@
 
 [프로젝트 소개](../README.md) · [MUMU legacy](../legacy/README.md) · [개발일지](../dev-notes/DEV_LOG.md)
 
-동일 입력으로 추가 측정한 응답 시간·토큰·CER·RAG 결과는 [비교 측정 결과](BENCHMARK_RESULTS.md)에 정리하였습니다. 이번 비교용은 Gemini로 교체한 버전으로, 아래의 기존 체감 대기 시간 비교와 조건을 구분하였습니다.
+동일 입력으로 추가 측정한 응답 시간·토큰·CER·RAG 결과는 [비교 측정 결과](BENCHMARK_RESULTS.md)에 정리하였습니다. 이번 원본 무무는 Gemini로 교체한 버전으로, 아래의 기존 체감 대기 시간 비교와 조건을 구분하였습니다.
 
 <br><br>
 
