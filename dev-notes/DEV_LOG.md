@@ -151,7 +151,7 @@ KS 튜닝은 [`AI Hub 123번 KsponSpeech`](https://aihub.or.kr/aihubdata/data/vi
 
 또한 로딩시간을 줄이기 위해서 AI Hub의 한국어 자유대화 샘플을 받아 원본 `openai/whisper-small`에 추가 학습을 했다.
 
-WAV와 JSON 전사를 연결하고, 같은 화자가 학습과 평가 양쪽에 들어가지 않도록 나눴다. [첫 학습 노트북](../notebooks/whisper-finetuning.ipynb)
+WAV와 JSON 전사를 연결하고, 같은 화자가 학습과 평가 양쪽에 들어가지 않도록 나눴다. [AI_Hub 자유대화 학습 노트북](../notebooks/whisper-finetuning.ipynb)
 
 | 항목 | 설정 및 결과 |
 |---|---|
