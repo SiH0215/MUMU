@@ -104,4 +104,4 @@ flowchart TD
 | 대화 전문·일기를 텍스트 파일로 보관 | SQLite에 저장하고 일기 및 말풍선 형태의 전문 열람 제공 |
 | Streamlit 화면과 watsonx SDK 호출 | Flask 화면과 LangChain을 통한 Gemini 호출 |
 
-개선 과정과 STT 비교 실험은 [개발일지](../dev-notes/DEV_LOG.md)에 정리했습니다.
+개선 과정과 [개발일지](../dev-notes/DEV_LOG.md)에 정리했습니다.
