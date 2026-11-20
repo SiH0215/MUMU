@@ -55,7 +55,7 @@ const context = vm.createContext({
     };
   },
 });
-vm.runInContext(fs.readFileSync("static/mumu.js", "utf8"), context);
+vm.runInContext(fs.readFileSync("mumu/static/mumu.js", "utf8"), context);
 const run = code => vm.runInContext(code, context);
 
 async function main() {

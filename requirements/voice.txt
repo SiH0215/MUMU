@@ -1,4 +1,4 @@
--r requirements.txt
+-r base.txt
 openai-whisper
 transformers==5.23.0
 silero-vad

@@ -11,8 +11,8 @@ from time import monotonic, sleep
 from langchain_core.messages import AIMessage, AIMessageChunk
 
 from app import create_app
-from main import Conversation
-from memory import ConversationMemory, chunk_conversation
+from mumu.chat import Conversation
+from mumu.memory import ConversationMemory, chunk_conversation
 
 
 class Embeddings:
@@ -32,6 +32,16 @@ class RegressionChecks(unittest.TestCase):
         self.folder = TemporaryDirectory()
         self.addCleanup(self.folder.cleanup)
         self.path = Path(self.folder.name) / "test.sqlite3"
+
+    def test_home_and_static_assets_resolve_after_packaging(self):
+        app = create_app(memory_path=self.path, embedder=Embeddings())
+        app.config["TESTING"] = True
+        client = app.test_client()
+        self.assertEqual(client.get("/").status_code, 200)
+        for path in ("/static/mumu.js", "/static/mumu.css", "/static/mumu/web_icon.png"):
+            with self.subTest(path=path), client.get(path) as response:
+                self.assertEqual(response.status_code, 200)
+                self.assertTrue(response.data)
 
     def test_concurrent_save_keeps_matching_transcript_and_chunks(self):
         barrier = Barrier(2)
@@ -108,8 +118,8 @@ class RegressionChecks(unittest.TestCase):
 
         app = create_app(loader, memory_path=self.path, embedder=Embeddings())
         first, second = app.test_client(), app.test_client()
-        first.get("/")
-        second.get("/")
+        self.assertEqual(first.get("/").status_code, 200)
+        self.assertEqual(second.get("/").status_code, 200)
         self.assertEqual(first.post("/api/chat", json={"text": "first"}).status_code, 200)
         self.assertEqual(second.post("/api/chat", json={"text": "second"}).status_code, 200)
         self.assertEqual(len(loads), 1)

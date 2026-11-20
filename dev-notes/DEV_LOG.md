@@ -86,7 +86,7 @@ LangChain으로 모델을 연결하고, 무무가 어떤 정보를 참고하여 
 | RAG로 찾은 과거 대화 | 관련 있는 이전 이야기와 사용자가 알려준 내용을 참고 |
 | 현재 사용자 입력 | 이번에 답할 대상. 과거 기록과 내용이 다르면 현재 입력을 우선 |
 
-특히 시스템 프롬프트에서는 정치적·선정적인 내용과 연애감정을 유도하는 표현은 제한하고, 가능한 기능의 범위도 함께 적었다. [현재 시스템 프롬프트](../SYSTEMPROMPT.txt)
+특히 시스템 프롬프트에서는 정치적·선정적인 내용과 연애감정을 유도하는 표현은 제한하고, 가능한 기능의 범위도 함께 적었다. [현재 시스템 프롬프트](../mumu/prompts/SYSTEMPROMPT.txt)
 
 <br><br>
 
@@ -151,7 +151,7 @@ KS 튜닝은 [`AI Hub 123번 KsponSpeech`](https://aihub.or.kr/aihubdata/data/vi
 
 또한 로딩시간을 줄이기 위해서 AI Hub의 한국어 자유대화 샘플을 받아 원본 `openai/whisper-small`에 추가 학습을 했다.
 
-WAV와 JSON 전사를 연결하고, 같은 화자가 학습과 평가 양쪽에 들어가지 않도록 나눴다. [AI_Hub 자유대화 학습 노트북](../notebooks/whisper-finetuning.ipynb)
+WAV와 JSON 전사를 연결하고, 같은 화자가 학습과 평가 양쪽에 들어가지 않도록 나눴다. [AI_Hub 자유대화 학습 노트북](../experiments/notebooks/whisper-finetuning.ipynb)
 
 | 항목 | 설정 및 결과 |
 |---|---|
@@ -176,7 +176,7 @@ WAV와 JSON 전사를 연결하고, 같은 화자가 학습과 평가 양쪽에 
 
 ### KsponSpeech 파인튜닝
 
-문장부호가 있는 KsponSpeech로 원본 `small`을 처음부터 다시 학습했다. (학습 발화 1,812개 - 약 2시간 분량) 별도 `eval_clean` 120개를 의문문과 평서문 각 60개로 구성해 같은 추론 설정으로 비교했다. [KsponSpeech 학습 노트북](../notebooks/whisper-ksponspeech.ipynb)
+문장부호가 있는 KsponSpeech로 원본 `small`을 처음부터 다시 학습했다. (학습 발화 1,812개 - 약 2시간 분량) 별도 `eval_clean` 120개를 의문문과 평서문 각 60개로 구성해 같은 추론 설정으로 비교했다. [KsponSpeech 학습 노트북](../experiments/notebooks/whisper-ksponspeech.ipynb)
 
 | 지표 | 원본 small | KsponSpeech 파인튜닝 |
 |---|---:|---:|

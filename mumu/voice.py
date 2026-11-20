@@ -1,13 +1,13 @@
 from importlib.resources import files
 from io import BytesIO
-from pathlib import Path
 
 import numpy as np
 import sounddevice as sd
 import torch
 import whisper
 
-from turns import FRAME_SAMPLES, SAMPLE_RATE, TurnDetector
+from .paths import ROOT
+from .turns import FRAME_SAMPLES, SAMPLE_RATE, TurnDetector
 
 FINE_TUNED_MODELS = {
     "fine-tuned": "mumu-whisper-small",
@@ -66,7 +66,7 @@ def load_vad():
 
 
 def load_transcriber(model_name="base"):
-    cache = Path(__file__).resolve().parent / ".cache" / "whisper"
+    cache = ROOT / ".cache" / "whisper"
     if model_name in FINE_TUNED_MODELS:
         model_dir = cache / FINE_TUNED_MODELS[model_name]
         if not (model_dir / "model.safetensors").is_file():

@@ -1,4 +1,1 @@
-langchain[google-genai]>=1.0,<2
-langchain-core>=1.0,<2
-python-dotenv>=1.0,<2
-tzdata
+-r requirements/base.txt

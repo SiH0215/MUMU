@@ -3,14 +3,13 @@ import json
 import os
 from contextlib import closing
 from datetime import datetime
-from pathlib import Path
 from zoneinfo import ZoneInfo
 
 from dotenv import dotenv_values, load_dotenv
 from langchain.chat_models import init_chat_model
 from langchain_core.messages import HumanMessage, SystemMessage, message_chunk_to_message
 
-ROOT = Path(__file__).resolve().parent
+from .paths import PROMPT_DIR, ROOT
 DEFAULT_MODEL = "google_genai:gemini-3.5-flash-lite"
 DEFAULT_WHISPER_MODEL = "small"
 KOREA_TIME = ZoneInfo("Asia/Seoul")
@@ -121,7 +120,7 @@ def load_chat():
         model_options["api_key"] = api_key
         model_options["include_thoughts"] = False
 
-    system_prompt = (ROOT / "SYSTEMPROMPT.txt").read_bytes().decode("utf-8-sig")
+    system_prompt = (PROMPT_DIR / "SYSTEMPROMPT.txt").read_bytes().decode("utf-8-sig")
     try:
         model = init_chat_model(model_name, **model_options)
     except (ImportError, ValueError) as error:
@@ -146,12 +145,12 @@ def main():
     try:
         if args.voice:
             try:
-                from voice import voice_input
+                from .voice import voice_input
 
                 with closing(voice_input(args.silence_ms, args.whisper_model)) as messages:
                     run_chat(model, system_prompt, messages)
             except ImportError:
-                raise SystemExit("음성 의존성을 설치하세요. README의 음성 모드 설정을 참고하세요.") from None
+                raise SystemExit("음성 의존성을 설치하세요. requirements/voice.txt를 확인하세요.") from None
         else:
             run_chat(model, system_prompt)
     except KeyboardInterrupt:

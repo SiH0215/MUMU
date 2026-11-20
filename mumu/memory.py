@@ -12,7 +12,8 @@ from threading import Lock
 from langchain_core.embeddings import Embeddings
 from langchain_core.messages import HumanMessage, SystemMessage
 
-from main import KOREA_TIME, ROOT
+from .chat import KOREA_TIME
+from .paths import PROMPT_DIR, ROOT
 
 EMBEDDING_MODEL = "intfloat/multilingual-e5-small"
 MIN_SIMILARITY = 0.84
@@ -31,7 +32,7 @@ def is_farewell(text):
 
 
 def write_diary_summary(model, source):
-    prompt = (ROOT / "MEMORYPROMPT.txt").read_text(encoding="utf-8-sig")
+    prompt = (PROMPT_DIR / "MEMORYPROMPT.txt").read_text(encoding="utf-8-sig")
     summary = model.invoke([
         SystemMessage(content=prompt),
         HumanMessage(content=json.dumps(source, ensure_ascii=False)),

@@ -9,8 +9,8 @@ import wave
 import torch
 from silero_vad import VADIterator
 
-from turns import FRAME_SAMPLES, SAMPLE_RATE, TurnDetector, Utterance
-from voice import load_transcriber, load_vad, speech_probability, transcribe, waveform
+from mumu.turns import FRAME_SAMPLES, SAMPLE_RATE, TurnDetector, Utterance
+from mumu.voice import load_transcriber, load_vad, speech_probability, transcribe, waveform
 
 
 def replay_fixed(pcm):
