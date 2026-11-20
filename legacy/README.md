@@ -49,11 +49,11 @@ flowchart TD
 
 ‘종료’, ‘잘가’, ‘그만’, ‘나중에 봐’, ‘다음에 더 얘기하자’ 중 하나로 인식되면 종료합니다. 화면에는 대화 이력을 비우는 초기화 버튼도 있습니다.
 
-구현: [pages/chat.py](original/pages/chat.py) · [음성 콘솔 버전](original/mumu.py) · [텍스트 콘솔 버전](original/mumu_cli.py)
+구현: [pages/chat.py](pages/chat.py) · [음성 콘솔 버전](mumu.py)
 
 ### 앞서 나눈 말을 참고하기
 
-시스템 프롬프트에 사용자 발화와 무무의 답변을 순서대로 붙여 다음 답변을 요청했습니다. 화면 버전은 현재 세션에 쌓인 대화 이력을 전달하고, 텍스트 콘솔 버전은 최근 5개 대화 쌍을 전달합니다.
+시스템 프롬프트에 사용자 발화와 무무의 답변을 순서대로 붙여 다음 답변을 요청했습니다. 화면 버전과 음성 콘솔 버전 모두 현재 세션에 쌓인 대화 이력을 전달합니다.
 
 저장한 과거 세션을 검색해 불러오는 기능은 없습니다. 현재 버전의 RAG와 달리, 당시의 문맥 참조는 진행 중인 대화 이력에 기반합니다.
 
@@ -61,32 +61,36 @@ flowchart TD
 
 원본 시스템 프롬프트에는 7~10세 어린아이처럼 다정하게 말하기, 사소한 대화를 이어가기, 한국어 사용, 일정 이야기를 자연스럽게 나누기 등의 지침이 있습니다. 말투와 반응 방식은 별도 학습이 아닌 시스템 프롬프트로 설정했습니다.
 
-[원본 대화 프롬프트](original/SYSTEMPROMPT.txt)
+[원본 대화 프롬프트](SYSTEMPROMPT.txt)
 
 ### 대화를 일기로 남기기
 
 대화 루프가 끝나면 전문을 `log_DB/log_번호.txt`에 저장하고, 별도의 일기 프롬프트로 전체 대화의 요약을 요청합니다. 무무가 ‘나’라는 주체로 3~4문장의 일기를 쓰고, 마지막 줄에 3단어 이하의 제목을 붙이도록 했습니다. 생성 결과는 `diary_DB/diary_번호.txt`에 저장합니다.
 
-[원본 일기 프롬프트](original/DIARYPROMPT.txt) · [일기 생성·저장 코드](original/pages/chat.py)
+[원본 일기 프롬프트](DIARYPROMPT.txt) · [일기 생성·저장 코드](pages/chat.py)
 
 ### 일기장에서 다시 읽기
 
 저장한 일기를 수정 시각 기준 최신순으로 나열하고 제목을 눌러 본문을 읽을 수 있습니다. 마지막 부분의 ‘제목:’ 줄 또는 마지막 비어 있지 않은 줄을 제목으로 사용합니다. 대화 전문은 파일로 저장하지만, 전문을 열람하는 별도 화면은 이 원본에 없습니다.
 
-[일기 목록](original/pages/diary.py) · [일기 본문](original/pages/read_diary.py)
+[일기 목록](pages/diary.py) · [일기 본문](pages/read_diary.py)
 
-## 4. 코드와 자료
+## 4. 파일 구성
+
+원본 `test` 폴더에서 홈·음성 대화·일기장에 필요한 파일만 남겼습니다. 재구성본, 실험용 코드, 별도 텍스트 콘솔 버전과 사용하지 않는 이미지는 제외했습니다.
 
 | 경로 | 내용 |
 |---|---|
-| [original/](original/) | `test` 폴더에서 확인한 당시 코드·이미지·대화 및 일기 프롬프트 |
+| [main.py](main.py) | Streamlit 홈 화면 |
+| [mumu.py](mumu.py) | 홈에서 불러오는 모델·음성 처리 코드와 음성 콘솔 대화 |
+| [pages/chat.py](pages/chat.py) | 음성 대화, 말풍선 표시, 전문·일기 저장 |
+| [pages/diary.py](pages/diary.py) · [pages/read_diary.py](pages/read_diary.py) | 일기 목록과 본문 열람 |
+| [SYSTEMPROMPT.txt](SYSTEMPROMPT.txt) · [DIARYPROMPT.txt](DIARYPROMPT.txt) | 당시 대화·일기 프롬프트 |
+| [img/](img/) · [pages/img/chat/](pages/img/chat/) | 코드에서 참조하는 화면 이미지 |
+| [requirements.txt](requirements.txt) · [.env.example](.env.example) | 필요한 Python 패키지와 환경변수 항목 |
 | [원본 코드 설명](docs/CODE_GUIDE.md) | 화면 이동, 음성 처리, 대화 이력과 일기 저장 흐름 |
-| [mumu/](mumu/) · [mumu_legacy.py](mumu_legacy.py) | 원본 폴더 확인 전에 개별 소스로 재구성한 모듈별 코드와 통합본 |
-| [재구성 코드 설명](docs/RECONSTRUCTED_CODE.md) · [tests/](tests/) | 재구성본의 처리 방식과 모의 객체 기반 테스트 |
 
-**원본과 재구성본은 동작 범위가 다릅니다.** 원본에는 화면과 일기 저장 기능이 있고, 재구성본은 콘솔 대화·음성 연동 중심입니다. `SYSTEMPROMPT.example.txt`는 재구성 과정에서 작성한 예시이며, 당시 원본은 `original/SYSTEMPROMPT.txt`입니다.
-
-원본 코드는 경로와 내용을 유지해 보관했습니다. `.env`, 개인 대화·일기 파일, 캐시 파일은 포함하지 않았습니다. 파일별 SHA-256은 [원본 파일 목록](original/SOURCE_MANIFEST.json)에 기록했습니다.
+남겨둔 Python 코드·프롬프트·이미지는 원본과 동일합니다. `.env`와 실제 대화·일기 기록은 포함하지 않았습니다. `log_DB/`와 `diary_DB/`는 코드에서 생성합니다.
 
 ## 5. 이후 개선한 부분
 

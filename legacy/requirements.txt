@@ -1,3 +1,8 @@
+streamlit
 python-dotenv
 requests
 ibm-watson-machine-learning
+numpy
+openai-whisper
+PyAudio
+pygame

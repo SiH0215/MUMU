@@ -1,23 +1,19 @@
 # 해커톤 원본 코드 설명
 
-이 문서는 [original/](../original/)에 보관한 `IBM-hackathon-program/test`의 코드를 기준으로 작성했습니다. 코드의 함수 호출과 저장 흐름을 확인한 내용이며, 당시 외부 서비스의 연결을 재검증한 결과는 아닙니다.
+이 문서는 `IBM-hackathon-program/test`에서 가져온 [레거시 코드](../)를 기준으로 작성했습니다. 코드의 함수 호출과 저장 흐름을 확인한 내용이며, 당시 외부 서비스의 연결을 재검증한 결과는 아닙니다.
 
 ## 파일 구성
 
 | 파일 | 역할 |
 |---|---|
-| [main.py](../original/main.py) | 이미지 기반 홈 화면. 대화와 일기장으로 이동 |
-| [pages/chat.py](../original/pages/chat.py) | 음성 대화, 말풍선 렌더링, 종료 후 전문·일기 저장 |
-| [pages/diary.py](../original/pages/diary.py) | 일기 파일 목록과 제목 표시 |
-| [pages/read_diary.py](../original/pages/read_diary.py) | 선택한 일기의 제목·본문 열람 |
-| [mumu.py](../original/mumu.py) | 콘솔 음성 대화와 전문·일기 저장 |
-| [mumu_cli.py](../original/mumu_cli.py) | 텍스트 콘솔 대화. 최근 5개 대화 쌍 전달, 전문·일기 저장 |
-| [st_chatbot.py](../original/st_chatbot.py) | 별도로 남아 있는 Streamlit 음성 대화 버전 |
-| [pages/mumu.py](../original/pages/mumu.py) | 콘솔 음성 대화 코드. 루트 `mumu.py`와 내용이 동일 |
-| [SYSTEMPROMPT.txt](../original/SYSTEMPROMPT.txt) | 대화 성격과 행동 지침 원본 |
-| [DIARYPROMPT.txt](../original/DIARYPROMPT.txt) | 무무의 1인칭 일기·제목 생성 지침 원본 |
-| [img/](../original/img/) · [pages/img/](../original/pages/img/) | 홈·대화·일기장 이미지. 중복 파일도 원래 위치 그대로 보관 |
-| [더미/](../original/더미/) | STT·TTS 개별 연동과 이전 모델·프롬프트를 시험한 코드 |
+| [main.py](../main.py) | 이미지 기반 홈 화면. 대화와 일기장으로 이동 |
+| [pages/chat.py](../pages/chat.py) | 음성 대화, 말풍선 렌더링, 종료 후 전문·일기 저장 |
+| [pages/diary.py](../pages/diary.py) | 일기 파일 목록과 제목 표시 |
+| [pages/read_diary.py](../pages/read_diary.py) | 선택한 일기의 제목·본문 열람 |
+| [mumu.py](../mumu.py) | 콘솔 음성 대화와 전문·일기 저장 |
+| [SYSTEMPROMPT.txt](../SYSTEMPROMPT.txt) | 대화 성격과 행동 지침 원본 |
+| [DIARYPROMPT.txt](../DIARYPROMPT.txt) | 무무의 1인칭 일기·제목 생성 지침 원본 |
+| [img/](../img/) · [pages/img/chat/](../pages/img/chat/) | 홈·일기장 및 대화 화면에서 참조하는 이미지 |
 
 ## 홈과 화면 이동
 
@@ -46,8 +42,6 @@ VAD로 말소리의 시작·끝을 판단하는 방식은 없으며, 마이크 �
 |---|---|
 | `pages/chat.py` | 현재 화면 세션에 누적한 이력 |
 | `mumu.py` | 현재 콘솔 대화의 전체 이력 |
-| `mumu_cli.py` | 현재 콘솔 대화 중 최근 5개 쌍 |
-| 재구성본 `mumu/` | 최근 5개 쌍만 내부에 유지 |
 
 화면 버전은 현재 발화를 이력에 먼저 추가한 뒤, `build_prompt()`에 현재 입력으로도 넘깁니다. 따라서 해당 발화가 요청에 두 번 들어가는 부분이 원본에 남아 있습니다. 보관본에서는 이를 수정하지 않았습니다.
 
@@ -57,7 +51,7 @@ VAD로 말소리의 시작·끝을 판단하는 방식은 없으며, 마이크 �
 
 `speak()`는 `https://supertoneapi.com/v1/text-to-speech/{VOICE_ID}`로 요청합니다. 한국어, `Sad` 스타일, `sona_speech_1`, WAV 형식, 속도 1.1 설정이 남아 있습니다. 음성 Content-Type 응답을 임시 WAV로 저장한 뒤 pygame으로 재생합니다.
 
-이 원본 함수에는 요청 타임아웃, 재생 후 임시 파일 삭제, JSON 음성 URL 응답 처리 등이 없습니다. 재구성본에 추가된 예외 처리나 자원 정리는 당시 원본의 기능으로 기술하지 않았습니다.
+이 원본 함수에는 요청 타임아웃, 재생 후 임시 파일 삭제, JSON 음성 URL 응답 처리 등이 없습니다. 이 보관본에는 원본에 없던 예외 처리나 자원 정리를 추가하지 않았습니다.
 
 ## 대화 종료와 일기 저장
 
@@ -78,6 +72,8 @@ VAD로 말소리의 시작·끝을 판단하는 방식은 없으며, 마이크 �
 
 ## 보관 기준
 
-원본 소스와 이미지의 내용은 변경하지 않았습니다. 과거 파일의 구문은 외부 API 호출 없이 검사했으며, 자격 증명과 실제 대화·일기는 업로드하지 않았습니다. [SOURCE_MANIFEST.json](../original/SOURCE_MANIFEST.json)의 SHA-256으로 원본과 복사본을 비교할 수 있습니다.
+홈과 음성 대화·일기장에 필요한 Python 파일 5개, 프롬프트 2개, 이미지 13개를 남겼습니다. 파일 내용은 원본과 같으며, 사용하지 않는 별도 대화 버전·실험 코드·이미지는 제외했습니다.
 
-`mumu/`, `mumu_legacy.py`, `tests/`는 별도 재구성본입니다. 해당 테스트 결과와 동작 설명은 [재구성 코드 설명](RECONSTRUCTED_CODE.md)을 참고하세요.
+`main.py`가 `import mumu`를 실행하므로 `mumu.py`는 필요합니다. `pages/chat.py`의 `find_asset()`이 페이지 폴더 아래의 이미지를 먼저 찾으므로 `pages/img/chat/`의 이미지 2개도 유지했습니다.
+
+`requirements.txt`에는 보관 코드가 사용하는 Python 패키지를, `.env.example`에는 환경변수 이름만 기록했습니다. 실제 API 키와 대화·일기 파일은 포함하지 않았습니다. 외부 서비스의 연결은 검증하지 않았습니다.

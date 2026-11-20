@@ -1,16 +1,10 @@
 .env
 .env.*
 !.env.example
-SYSTEMPROMPT.txt
 .venv/
 __pycache__/
 *.py[cod]
 *.wav
 *.mp3
-.pytest_cache/
-.test-temp/
-
-# Recovered historical prompt; generated conversations stay local.
-!original/SYSTEMPROMPT.txt
-original/log_DB/
-original/diary_DB/
+log_DB/
+diary_DB/
