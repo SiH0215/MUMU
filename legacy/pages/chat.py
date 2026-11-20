@@ -70,7 +70,7 @@ def find_asset(*relative_candidates):
         if os.path.exists(p2): return p2
     return os.path.join(here, *relative_candidates[0])
 
-# 모델이 내놓는 "무무 >>", "assistant:" 같은 말머리 제거
+# 말머리 제거
 ROLE_PREFIX_RE = re.compile(
     r'^(무무\s*>>\s*|유저\s*>>\s*|assistant\s*:?\s*|bot\s*:?\s*|system\s*:?\s*)+',
     re.IGNORECASE
@@ -78,10 +78,9 @@ ROLE_PREFIX_RE = re.compile(
 def sanitize_role_prefixes(text: str) -> str:
     return ROLE_PREFIX_RE.sub('', text or '').strip()
 
-# ⬇️ 플레이스홀더를 받아서 그 위치에 안내 띄우게 변경
 def record_audio(status_ph=None):
     if status_ph is None:
-        status_ph = st.session_state.get("stt_status_ph")  # 왼쪽 컬럼에 만든 자리
+        status_ph = st.session_state.get("stt_status_ph")
     if status_ph is None:
         status_ph = st.empty()
 
@@ -258,24 +257,20 @@ def render_phone(history):
 if "history" not in st.session_state:
     st.session_state.history = []
 
-# ───── 좌(버튼/알림) / 우(모바일 화면) 레이아웃 ─────
 left, right = st.columns([1.5, 3], vertical_alignment="top")
 
 with left:
     st.markdown('<div class="side-start">', unsafe_allow_html=True)
 
-    # 두 버튼 가로 배치: 대화하기(조금 넓게) | 초기화
     col_start, col_reset = st.columns([4, 3], vertical_alignment="top")  # ← 대화하기 살짝 넓힘
     with col_start:
         start_clicked = st.button("대화하기", key="start_chat")
     with col_reset:
         reset_clicked = st.button("초기화", key="reset_chat")
 
-    # 버튼 아래 알림 자리 (STT 상태)
     st.session_state["stt_status_ph"] = st.empty()
     st.markdown('</div>', unsafe_allow_html=True)
 
-# 초기화 버튼 처리: 히스토리 비우고 즉시 리런
 if 'reset_clicked_once' not in st.session_state:
     st.session_state.reset_clicked_once = False
 
@@ -339,7 +334,7 @@ if start_clicked:
         log_path = get_next_indexed_filename("log_DB", "log")
         with open(log_path, "w", encoding="utf-8") as f:
             for user, bot in st.session_state.history:
-                f.write(f"유저 >> {user}\n무무 >> {bot}\n\n")  # 여기서만 라벨 1회 부여
+                f.write(f"유저 >> {user}\n무무 >> {bot}\n\n")
         st.success(f"📄 대화 저장됨: {log_path}")
     except Exception as e:
         st.error(f"대화 저장 실패: {e}")
