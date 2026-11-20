@@ -1,14 +1,8 @@
 # MUMU 개발 일지
 
 해커톤에서 만들었던 무무를 개선/보완하며 바뀐점, 느낀점, 고민, 테스트 결과 등에 관한 문서임
-처음에는 개별 소스를 바탕으로 legacy를 재구성했다. 이후 로컬 `IBM-hackathon-program/test`에서 원본을 확인했다. 현재 [legacy](../legacy/)에는 홈·음성 대화·일기장에 필요한 원본 코드와 이미지·프롬프트만 남겼으며, 재구성본과 실험 코드는 제거했다.
-
-## 초기 코드 백업
-
-| 스냅샷 | 내용 |
-|---|---|
-| [01 · IBM watsonx 텍스트 초안](snapshots/01-watsonx-text-draft/main.py) | CLI 작동 버전 초안. 해커톤 당시 시스템 프롬프트와 LangChain의 ChatWatsonx 연결 코드 |
-| [02 · Gemini 텍스트 및 음성 입력](snapshots/02-gemini-voice-2026-11-16/main.py) | 텍스트·음성 대화 코드. 발화 종료 처리, Whisper, STT 비교 코드와 합성 테스트 WAV를 함께 보관 |
+처음에는 개별 소스를 바탕으로 legacy를 재구성했다. 이후 로컬 `IBM-hackathon-program/test`에서 원본을 확인했다. 
+현재 [legacy](../legacy/)에는 홈·음성 대화·일기장에 필요한 원본 코드와 이미지·프롬프트만 남겼으며, 재구성본과 실험 코드는 제거했다.
 
 ## 1. 프롬프트 다듬기
 
