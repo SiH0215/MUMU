@@ -2,7 +2,11 @@
 
 이 문서는 2025 IBM 하계해커톤에서 개발했던 MUMU를 개선 및 보완하여 정리한 문서입니다.
 
-기존의 MUMU는 Whisper로 말을 받아쓰고, IBM watsonx(llama-4-maverick)로 답변을 만든 뒤 Supertone으로 읽어주는 음성 챗봇이었습니다. 당시 코드와 설명은 [MUMU legacy](legacy/README.md)에서 확인할 수 있습니다.
+기존의 MUMU는 Whisper로 말을 받아쓰고, IBM watsonx(llama-4-maverick)로 답변을 만든 뒤 Supertone으로 읽어주는 음성 챗봇이었습니다.
+
+당시 코드와 설명은 [MUMU legacy](legacy/README.md)에서 확인할 수 있습니다.
+
+보완 과정은 [개발일지](dev-notes/DEV_LOG.md)에서 확인할 수 있습니다.
 
 # MUMU - 대화를 위한 챗봇
 
@@ -13,8 +17,6 @@
 앞서 나눈 말을 기억하며 가볍고 일상적인 대화를 이어가는 것을 목표로 하였습니다.
 
 쉬운 말과 짧은 감정 표현으로 어린이 같은 성격을 드러내고, 사용자의 의도와 상황을 이해해 그에 맞게 반응하도록 행동 지침을 설계하였습니다.
-
-개발 과정은 [개발일지](dev-notes/DEV_LOG.md)를 통해 볼 수 있습니다.
 
 ## 2. 구현 방식
 
