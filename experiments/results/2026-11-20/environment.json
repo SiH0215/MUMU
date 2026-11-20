@@ -1,0 +1,36 @@
+{
+  "python": "3.11.9",
+  "platform": "Windows-10-10.0.26200-SP0",
+  "processor": "Intel64 Family 6 Model 140 Stepping 1, GenuineIntel",
+  "packages": {
+    "torch": "2.15.0+cpu",
+    "openai-whisper": "20250625",
+    "langchain": "1.5.0",
+    "langchain-google-genai": "4.5.0",
+    "Flask": "3.1.3"
+  },
+  "code_hashes": {
+    "mumu\\chat.py": "ca5c56b81d2c67d62e8e5ff48269eb7d093cf65589f4631d7465a43e8349d28b",
+    "mumu\\memory.py": "4d6aa916f22289799a3dbd2d57d4c975d309669afbe33666ba26068a75a4eca7",
+    "mumu\\voice.py": "209c20d88d00a637956250922c1cc62185220fd67ed767182a20b6acb8a18779",
+    "mumu\\turns.py": "c786973cdf306f437bf3a8592eba415dec1d4354065d8fa9df3c4390578baa8f"
+  },
+  "legacy_hashes": {
+    "pages\\chat.py": "8074f2dc550d0150015c5ae7b5dad8cb57b2e66e8902bae81b4ea54e08b4824c",
+    "SYSTEMPROMPT.txt": "981302ff984f12865e95b6570df9913ed3f19045e93c98d863476558004c5cab"
+  },
+  "date": "2026-11-20",
+  "app_commit": "1f62d65",
+  "model_settings": {
+    "legacy_model": "gemini-3.5-flash-lite",
+    "reverse_model": "gemini-3.5-flash-lite",
+    "legacy_temperature": null,
+    "reverse_temperature": null
+  },
+  "thread_count": 4,
+  "gpu": false,
+  "model_weight_bytes": {
+    "base": 145262807,
+    "small": 483617219
+  }
+}

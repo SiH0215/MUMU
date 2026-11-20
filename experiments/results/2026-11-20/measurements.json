@@ -1,0 +1,2719 @@
+{
+  "llm": [
+    {
+      "scenario": "break",
+      "turn": 1,
+      "variant": "legacy",
+      "seconds": 9.474442499998986,
+      "first_text_seconds": 9.474442499998986,
+      "characters": 53,
+      "questions": 1,
+      "usage": {
+        "input_tokens": 496,
+        "output_tokens": 31,
+        "total_tokens": 527,
+        "input_token_details": {
+          "cache_read": 0
+        }
+      },
+      "expected_fact": null
+    },
+    {
+      "scenario": "break",
+      "turn": 1,
+      "variant": "reverse",
+      "seconds": 1.4989814000000479,
+      "first_text_seconds": 1.4979483999995864,
+      "characters": 16,
+      "questions": 1,
+      "usage": {
+        "input_tokens": 1614,
+        "output_tokens": 9,
+        "total_tokens": 1623,
+        "input_token_details": {
+          "cache_read": 0
+        }
+      },
+      "expected_fact": null
+    },
+    {
+      "scenario": "break",
+      "turn": 2,
+      "variant": "reverse",
+      "seconds": 1.0502240000023448,
+      "first_text_seconds": 0.9489439000026323,
+      "characters": 35,
+      "questions": 0,
+      "usage": {
+        "input_tokens": 1633,
+        "output_tokens": 23,
+        "total_tokens": 1656,
+        "input_token_details": {
+          "cache_read": 0
+        }
+      },
+      "expected_fact": null
+    },
+    {
+      "scenario": "break",
+      "turn": 2,
+      "variant": "legacy",
+      "seconds": 1.0802856999980577,
+      "first_text_seconds": 1.0802856999980577,
+      "characters": 108,
+      "questions": 2,
+      "usage": {
+        "input_tokens": 537,
+        "output_tokens": 59,
+        "total_tokens": 596,
+        "input_token_details": {
+          "cache_read": 0
+        }
+      },
+      "expected_fact": null
+    },
+    {
+      "scenario": "break",
+      "turn": 3,
+      "variant": "legacy",
+      "seconds": 1.301006600002438,
+      "first_text_seconds": 1.301006600002438,
+      "characters": 140,
+      "questions": 1,
+      "usage": {
+        "input_tokens": 613,
+        "output_tokens": 86,
+        "total_tokens": 699,
+        "input_token_details": {
+          "cache_read": 0
+        }
+      },
+      "expected_fact": null
+    },
+    {
+      "scenario": "break",
+      "turn": 3,
+      "variant": "reverse",
+      "seconds": 0.9640502000002016,
+      "first_text_seconds": 0.9207504000005429,
+      "characters": 39,
+      "questions": 0,
+      "usage": {
+        "input_tokens": 1673,
+        "output_tokens": 24,
+        "total_tokens": 1697,
+        "input_token_details": {
+          "cache_read": 0
+        }
+      },
+      "expected_fact": null
+    },
+    {
+      "scenario": "headache",
+      "turn": 1,
+      "variant": "reverse",
+      "seconds": 3.254304399997636,
+      "first_text_seconds": 3.25242679999792,
+      "characters": 68,
+      "questions": 1,
+      "usage": {
+        "input_tokens": 1621,
+        "output_tokens": 38,
+        "total_tokens": 1659,
+        "input_token_details": {
+          "cache_read": 0
+        }
+      },
+      "expected_fact": null
+    },
+    {
+      "scenario": "headache",
+      "turn": 1,
+      "variant": "legacy",
+      "seconds": 1.4294045999995433,
+      "first_text_seconds": 1.4294045999995433,
+      "characters": 231,
+      "questions": 4,
+      "usage": {
+        "input_tokens": 503,
+        "output_tokens": 129,
+        "total_tokens": 632,
+        "input_token_details": {
+          "cache_read": 0
+        }
+      },
+      "expected_fact": null
+    },
+    {
+      "scenario": "headache",
+      "turn": 2,
+      "variant": "legacy",
+      "seconds": 1.631344599998556,
+      "first_text_seconds": 1.631344599998556,
+      "characters": 247,
+      "questions": 4,
+      "usage": {
+        "input_tokens": 645,
+        "output_tokens": 138,
+        "total_tokens": 783,
+        "input_token_details": {
+          "cache_read": 0
+        }
+      },
+      "expected_fact": null
+    },
+    {
+      "scenario": "headache",
+      "turn": 2,
+      "variant": "reverse",
+      "seconds": 8.795368499999313,
+      "first_text_seconds": 8.58320680000179,
+      "characters": 101,
+      "questions": 0,
+      "usage": {
+        "input_tokens": 1672,
+        "output_tokens": 53,
+        "total_tokens": 1725,
+        "input_token_details": {
+          "cache_read": 0
+        }
+      },
+      "expected_fact": null
+    },
+    {
+      "scenario": "headache",
+      "turn": 3,
+      "variant": "reverse",
+      "seconds": 1.060307499999908,
+      "first_text_seconds": 1.0584478999990097,
+      "characters": 53,
+      "questions": 1,
+      "usage": {
+        "input_tokens": 1750,
+        "output_tokens": 30,
+        "total_tokens": 1780,
+        "input_token_details": {
+          "cache_read": 0
+        }
+      },
+      "expected_fact": null
+    },
+    {
+      "scenario": "headache",
+      "turn": 3,
+      "variant": "legacy",
+      "seconds": 1.4264676999991934,
+      "first_text_seconds": 1.4264676999991934,
+      "characters": 159,
+      "questions": 3,
+      "usage": {
+        "input_tokens": 808,
+        "output_tokens": 98,
+        "total_tokens": 906,
+        "input_token_details": {
+          "cache_read": 0
+        }
+      },
+      "expected_fact": null
+    },
+    {
+      "scenario": "development",
+      "turn": 1,
+      "variant": "legacy",
+      "seconds": 1.5018382999987807,
+      "first_text_seconds": 1.5018382999987807,
+      "characters": 154,
+      "questions": 2,
+      "usage": {
+        "input_tokens": 503,
+        "output_tokens": 92,
+        "total_tokens": 595,
+        "input_token_details": {
+          "cache_read": 0
+        }
+      },
+      "expected_fact": null
+    },
+    {
+      "scenario": "development",
+      "turn": 1,
+      "variant": "reverse",
+      "seconds": 1.006575299998076,
+      "first_text_seconds": 0.9551623000006657,
+      "characters": 44,
+      "questions": 1,
+      "usage": {
+        "input_tokens": 1621,
+        "output_tokens": 27,
+        "total_tokens": 1648,
+        "input_token_details": {
+          "cache_read": 0
+        }
+      },
+      "expected_fact": null
+    },
+    {
+      "scenario": "development",
+      "turn": 2,
+      "variant": "reverse",
+      "seconds": 0.789340399998764,
+      "first_text_seconds": 0.7877893000004406,
+      "characters": 37,
+      "questions": 1,
+      "usage": {
+        "input_tokens": 1669,
+        "output_tokens": 25,
+        "total_tokens": 1694,
+        "input_token_details": {
+          "cache_read": 0
+        }
+      },
+      "expected_fact": null
+    },
+    {
+      "scenario": "development",
+      "turn": 2,
+      "variant": "legacy",
+      "seconds": 1.5397030000021914,
+      "first_text_seconds": 1.5397030000021914,
+      "characters": 267,
+      "questions": 4,
+      "usage": {
+        "input_tokens": 616,
+        "output_tokens": 155,
+        "total_tokens": 771,
+        "input_token_details": {
+          "cache_read": 0
+        }
+      },
+      "expected_fact": null
+    },
+    {
+      "scenario": "development",
+      "turn": 3,
+      "variant": "legacy",
+      "error_type": "GoogleRateLimitError"
+    },
+    {
+      "scenario": "development",
+      "turn": 3,
+      "variant": "legacy",
+      "seconds": 1.8245561000003363,
+      "first_text_seconds": 1.8245561000003363,
+      "characters": 162,
+      "questions": 3,
+      "usage": {
+        "input_tokens": 781,
+        "output_tokens": 104,
+        "total_tokens": 885,
+        "input_token_details": {
+          "cache_read": 0
+        }
+      },
+      "expected_fact": "보리별",
+      "fact_hit": true
+    },
+    {
+      "scenario": "development",
+      "turn": 3,
+      "variant": "reverse",
+      "seconds": 1.392406500002835,
+      "first_text_seconds": 1.382814900000085,
+      "characters": 37,
+      "questions": 0,
+      "usage": {
+        "input_tokens": 1704,
+        "output_tokens": 26,
+        "total_tokens": 1730,
+        "input_token_details": {
+          "cache_read": 0
+        }
+      },
+      "expected_fact": "보리별",
+      "fact_hit": true
+    },
+    {
+      "scenario": "dog",
+      "turn": 1,
+      "variant": "reverse",
+      "seconds": 1.3438175000010233,
+      "first_text_seconds": 1.3423335000006773,
+      "characters": 35,
+      "questions": 1,
+      "usage": {
+        "input_tokens": 1621,
+        "output_tokens": 21,
+        "total_tokens": 1642,
+        "input_token_details": {
+          "cache_read": 0
+        }
+      },
+      "expected_fact": null
+    },
+    {
+      "scenario": "dog",
+      "turn": 1,
+      "variant": "legacy",
+      "seconds": 1.4095678000012413,
+      "first_text_seconds": 1.4095678000012413,
+      "characters": 119,
+      "questions": 3,
+      "usage": {
+        "input_tokens": 503,
+        "output_tokens": 78,
+        "total_tokens": 581,
+        "input_token_details": {
+          "cache_read": 0
+        }
+      },
+      "expected_fact": null
+    },
+    {
+      "scenario": "dog",
+      "turn": 2,
+      "variant": "legacy",
+      "seconds": 1.6095571999976528,
+      "first_text_seconds": 1.6095571999976528,
+      "characters": 135,
+      "questions": 2,
+      "usage": {
+        "input_tokens": 593,
+        "output_tokens": 89,
+        "total_tokens": 682,
+        "input_token_details": {
+          "cache_read": 0
+        }
+      },
+      "expected_fact": null
+    },
+    {
+      "scenario": "dog",
+      "turn": 2,
+      "variant": "reverse",
+      "seconds": 1.1768229000008432,
+      "first_text_seconds": 1.1743458999990253,
+      "characters": 33,
+      "questions": 1,
+      "usage": {
+        "input_tokens": 1655,
+        "output_tokens": 23,
+        "total_tokens": 1678,
+        "input_token_details": {
+          "cache_read": 0
+        }
+      },
+      "expected_fact": null
+    },
+    {
+      "scenario": "dog",
+      "turn": 3,
+      "variant": "reverse",
+      "seconds": 1.2992073999994318,
+      "first_text_seconds": 1.297205099999701,
+      "characters": 19,
+      "questions": 0,
+      "usage": {
+        "input_tokens": 1688,
+        "output_tokens": 12,
+        "total_tokens": 1700,
+        "input_token_details": {
+          "cache_read": 0
+        }
+      },
+      "expected_fact": "누룽",
+      "fact_hit": true
+    },
+    {
+      "scenario": "dog",
+      "turn": 3,
+      "variant": "legacy",
+      "seconds": 1.4161948000000848,
+      "first_text_seconds": 1.4161948000000848,
+      "characters": 136,
+      "questions": 3,
+      "usage": {
+        "input_tokens": 692,
+        "output_tokens": 88,
+        "total_tokens": 780,
+        "input_token_details": {
+          "cache_read": 0
+        }
+      },
+      "expected_fact": "누룽",
+      "fact_hit": true
+    }
+  ],
+  "stt_model_only": [
+    {
+      "id": "eval_clean/KsponSpeech_E00286.pcm",
+      "model": "base",
+      "seconds": 0.7665265999967232,
+      "audio_seconds": 4.435,
+      "edits": 7,
+      "reference_characters": 21,
+      "exact": false,
+      "question": false,
+      "missing_question": false,
+      "inserted_question": false
+    },
+    {
+      "id": "eval_clean/KsponSpeech_E00286.pcm",
+      "model": "small",
+      "seconds": 4.428470199996809,
+      "audio_seconds": 4.435,
+      "edits": 4,
+      "reference_characters": 21,
+      "exact": false,
+      "question": false,
+      "missing_question": false,
+      "inserted_question": false
+    },
+    {
+      "id": "eval_clean/KsponSpeech_E02830.pcm",
+      "model": "small",
+      "seconds": 8.009332700003142,
+      "audio_seconds": 8.655,
+      "edits": 3,
+      "reference_characters": 50,
+      "exact": false,
+      "question": true,
+      "missing_question": false,
+      "inserted_question": false
+    },
+    {
+      "id": "eval_clean/KsponSpeech_E02830.pcm",
+      "model": "base",
+      "seconds": 0.9722866999982216,
+      "audio_seconds": 8.655,
+      "edits": 3,
+      "reference_characters": 50,
+      "exact": false,
+      "question": true,
+      "missing_question": false,
+      "inserted_question": false
+    },
+    {
+      "id": "eval_clean/KsponSpeech_E01368.pcm",
+      "model": "base",
+      "seconds": 0.8699554999984684,
+      "audio_seconds": 5.543,
+      "edits": 8,
+      "reference_characters": 27,
+      "exact": false,
+      "question": false,
+      "missing_question": false,
+      "inserted_question": false
+    },
+    {
+      "id": "eval_clean/KsponSpeech_E01368.pcm",
+      "model": "small",
+      "seconds": 6.860570299999381,
+      "audio_seconds": 5.543,
+      "edits": 7,
+      "reference_characters": 27,
+      "exact": false,
+      "question": false,
+      "missing_question": false,
+      "inserted_question": false
+    },
+    {
+      "id": "eval_clean/KsponSpeech_E01466.pcm",
+      "model": "small",
+      "seconds": 4.970933100001275,
+      "audio_seconds": 3.434,
+      "edits": 3,
+      "reference_characters": 21,
+      "exact": false,
+      "question": true,
+      "missing_question": false,
+      "inserted_question": false
+    },
+    {
+      "id": "eval_clean/KsponSpeech_E01466.pcm",
+      "model": "base",
+      "seconds": 0.7844027000028291,
+      "audio_seconds": 3.434,
+      "edits": 5,
+      "reference_characters": 21,
+      "exact": false,
+      "question": true,
+      "missing_question": false,
+      "inserted_question": false
+    },
+    {
+      "id": "eval_clean/KsponSpeech_E00749.pcm",
+      "model": "base",
+      "seconds": 0.7085609999994631,
+      "audio_seconds": 2.528,
+      "edits": 3,
+      "reference_characters": 22,
+      "exact": false,
+      "question": true,
+      "missing_question": false,
+      "inserted_question": false
+    },
+    {
+      "id": "eval_clean/KsponSpeech_E00749.pcm",
+      "model": "small",
+      "seconds": 4.520724900001369,
+      "audio_seconds": 2.528,
+      "edits": 1,
+      "reference_characters": 22,
+      "exact": false,
+      "question": true,
+      "missing_question": false,
+      "inserted_question": false
+    },
+    {
+      "id": "eval_clean/KsponSpeech_E02533.pcm",
+      "model": "small",
+      "seconds": 4.4418112999992445,
+      "audio_seconds": 2.725,
+      "edits": 7,
+      "reference_characters": 17,
+      "exact": false,
+      "question": false,
+      "missing_question": false,
+      "inserted_question": false
+    },
+    {
+      "id": "eval_clean/KsponSpeech_E02533.pcm",
+      "model": "base",
+      "seconds": 4.422191400000884,
+      "audio_seconds": 2.725,
+      "edits": 17,
+      "reference_characters": 17,
+      "exact": false,
+      "question": false,
+      "missing_question": false,
+      "inserted_question": false
+    },
+    {
+      "id": "eval_clean/KsponSpeech_E01046.pcm",
+      "model": "base",
+      "seconds": 0.897769100000005,
+      "audio_seconds": 7.697,
+      "edits": 3,
+      "reference_characters": 42,
+      "exact": false,
+      "question": false,
+      "missing_question": false,
+      "inserted_question": false
+    },
+    {
+      "id": "eval_clean/KsponSpeech_E01046.pcm",
+      "model": "small",
+      "seconds": 6.384701800001494,
+      "audio_seconds": 7.697,
+      "edits": 0,
+      "reference_characters": 42,
+      "exact": true,
+      "question": false,
+      "missing_question": false,
+      "inserted_question": false
+    },
+    {
+      "id": "eval_clean/KsponSpeech_E01001.pcm",
+      "model": "small",
+      "seconds": 3.114885700000741,
+      "audio_seconds": 1.629,
+      "edits": 0,
+      "reference_characters": 7,
+      "exact": true,
+      "question": false,
+      "missing_question": false,
+      "inserted_question": false
+    },
+    {
+      "id": "eval_clean/KsponSpeech_E01001.pcm",
+      "model": "base",
+      "seconds": 3.8883061000015005,
+      "audio_seconds": 1.629,
+      "edits": 7,
+      "reference_characters": 7,
+      "exact": false,
+      "question": false,
+      "missing_question": false,
+      "inserted_question": false
+    },
+    {
+      "id": "eval_clean/KsponSpeech_E01852.pcm",
+      "model": "base",
+      "seconds": 0.6659600000020873,
+      "audio_seconds": 6.425,
+      "edits": 2,
+      "reference_characters": 9,
+      "exact": false,
+      "question": true,
+      "missing_question": false,
+      "inserted_question": false
+    },
+    {
+      "id": "eval_clean/KsponSpeech_E01852.pcm",
+      "model": "small",
+      "seconds": 3.5182717999996385,
+      "audio_seconds": 6.425,
+      "edits": 1,
+      "reference_characters": 9,
+      "exact": false,
+      "question": true,
+      "missing_question": false,
+      "inserted_question": false
+    },
+    {
+      "id": "eval_clean/KsponSpeech_E01933.pcm",
+      "model": "small",
+      "seconds": 3.6613863999991736,
+      "audio_seconds": 2.054,
+      "edits": 0,
+      "reference_characters": 11,
+      "exact": true,
+      "question": true,
+      "missing_question": false,
+      "inserted_question": false
+    },
+    {
+      "id": "eval_clean/KsponSpeech_E01933.pcm",
+      "model": "base",
+      "seconds": 0.6677887000005285,
+      "audio_seconds": 2.054,
+      "edits": 3,
+      "reference_characters": 11,
+      "exact": false,
+      "question": true,
+      "missing_question": false,
+      "inserted_question": false
+    },
+    {
+      "id": "eval_clean/KsponSpeech_E02763.pcm",
+      "model": "base",
+      "seconds": 0.7060394000000088,
+      "audio_seconds": 2.618,
+      "edits": 7,
+      "reference_characters": 12,
+      "exact": false,
+      "question": false,
+      "missing_question": false,
+      "inserted_question": false
+    },
+    {
+      "id": "eval_clean/KsponSpeech_E02763.pcm",
+      "model": "small",
+      "seconds": 4.0940506999977515,
+      "audio_seconds": 2.618,
+      "edits": 7,
+      "reference_characters": 12,
+      "exact": false,
+      "question": false,
+      "missing_question": false,
+      "inserted_question": false
+    },
+    {
+      "id": "eval_clean/KsponSpeech_E00760.pcm",
+      "model": "small",
+      "seconds": 3.7130475000012666,
+      "audio_seconds": 2.298,
+      "edits": 0,
+      "reference_characters": 16,
+      "exact": true,
+      "question": false,
+      "missing_question": false,
+      "inserted_question": false
+    },
+    {
+      "id": "eval_clean/KsponSpeech_E00760.pcm",
+      "model": "base",
+      "seconds": 0.6697324999986449,
+      "audio_seconds": 2.298,
+      "edits": 2,
+      "reference_characters": 16,
+      "exact": false,
+      "question": false,
+      "missing_question": false,
+      "inserted_question": false
+    },
+    {
+      "id": "eval_clean/KsponSpeech_E00492.pcm",
+      "model": "base",
+      "seconds": 0.6956219999992754,
+      "audio_seconds": 2.563,
+      "edits": 4,
+      "reference_characters": 18,
+      "exact": false,
+      "question": false,
+      "missing_question": false,
+      "inserted_question": false
+    },
+    {
+      "id": "eval_clean/KsponSpeech_E00492.pcm",
+      "model": "small",
+      "seconds": 3.795925000002171,
+      "audio_seconds": 2.563,
+      "edits": 4,
+      "reference_characters": 18,
+      "exact": false,
+      "question": false,
+      "missing_question": false,
+      "inserted_question": false
+    },
+    {
+      "id": "eval_clean/KsponSpeech_E02986.pcm",
+      "model": "small",
+      "seconds": 3.890371100002085,
+      "audio_seconds": 2.591,
+      "edits": 0,
+      "reference_characters": 16,
+      "exact": true,
+      "question": true,
+      "missing_question": true,
+      "inserted_question": false
+    },
+    {
+      "id": "eval_clean/KsponSpeech_E02986.pcm",
+      "model": "base",
+      "seconds": 0.7024079999973765,
+      "audio_seconds": 2.591,
+      "edits": 2,
+      "reference_characters": 16,
+      "exact": false,
+      "question": true,
+      "missing_question": true,
+      "inserted_question": false
+    },
+    {
+      "id": "eval_clean/KsponSpeech_E01059.pcm",
+      "model": "base",
+      "seconds": 0.7608294999990903,
+      "audio_seconds": 3.786,
+      "edits": 6,
+      "reference_characters": 16,
+      "exact": false,
+      "question": true,
+      "missing_question": true,
+      "inserted_question": false
+    },
+    {
+      "id": "eval_clean/KsponSpeech_E01059.pcm",
+      "model": "small",
+      "seconds": 4.686193700003059,
+      "audio_seconds": 3.786,
+      "edits": 2,
+      "reference_characters": 16,
+      "exact": false,
+      "question": true,
+      "missing_question": false,
+      "inserted_question": false
+    },
+    {
+      "id": "eval_clean/KsponSpeech_E02585.pcm",
+      "model": "small",
+      "seconds": 7.851675300000352,
+      "audio_seconds": 8.882,
+      "edits": 3,
+      "reference_characters": 53,
+      "exact": false,
+      "question": false,
+      "missing_question": false,
+      "inserted_question": false
+    },
+    {
+      "id": "eval_clean/KsponSpeech_E02585.pcm",
+      "model": "base",
+      "seconds": 0.9876635000000533,
+      "audio_seconds": 8.882,
+      "edits": 8,
+      "reference_characters": 53,
+      "exact": false,
+      "question": false,
+      "missing_question": false,
+      "inserted_question": false
+    },
+    {
+      "id": "eval_clean/KsponSpeech_E02556.pcm",
+      "model": "base",
+      "seconds": 0.6180585000001884,
+      "audio_seconds": 1.898,
+      "edits": 2,
+      "reference_characters": 10,
+      "exact": false,
+      "question": false,
+      "missing_question": false,
+      "inserted_question": false
+    },
+    {
+      "id": "eval_clean/KsponSpeech_E02556.pcm",
+      "model": "small",
+      "seconds": 3.7104770000005374,
+      "audio_seconds": 1.898,
+      "edits": 1,
+      "reference_characters": 10,
+      "exact": false,
+      "question": false,
+      "missing_question": false,
+      "inserted_question": false
+    },
+    {
+      "id": "eval_clean/KsponSpeech_E01885.pcm",
+      "model": "small",
+      "seconds": 5.651929599996947,
+      "audio_seconds": 8.5,
+      "edits": 0,
+      "reference_characters": 32,
+      "exact": true,
+      "question": true,
+      "missing_question": true,
+      "inserted_question": false
+    },
+    {
+      "id": "eval_clean/KsponSpeech_E01885.pcm",
+      "model": "base",
+      "seconds": 0.7714424000005238,
+      "audio_seconds": 8.5,
+      "edits": 6,
+      "reference_characters": 32,
+      "exact": false,
+      "question": true,
+      "missing_question": false,
+      "inserted_question": false
+    },
+    {
+      "id": "eval_clean/KsponSpeech_E01743.pcm",
+      "model": "base",
+      "seconds": 0.6445045000000391,
+      "audio_seconds": 1.733,
+      "edits": 3,
+      "reference_characters": 8,
+      "exact": false,
+      "question": true,
+      "missing_question": true,
+      "inserted_question": false
+    },
+    {
+      "id": "eval_clean/KsponSpeech_E01743.pcm",
+      "model": "small",
+      "seconds": 3.463598700000148,
+      "audio_seconds": 1.733,
+      "edits": 1,
+      "reference_characters": 8,
+      "exact": false,
+      "question": true,
+      "missing_question": true,
+      "inserted_question": false
+    },
+    {
+      "id": "eval_clean/KsponSpeech_E02435.pcm",
+      "model": "small",
+      "seconds": 3.807775799999945,
+      "audio_seconds": 2.239,
+      "edits": 1,
+      "reference_characters": 10,
+      "exact": false,
+      "question": true,
+      "missing_question": false,
+      "inserted_question": false
+    },
+    {
+      "id": "eval_clean/KsponSpeech_E02435.pcm",
+      "model": "base",
+      "seconds": 1.396140099997865,
+      "audio_seconds": 2.239,
+      "edits": 6,
+      "reference_characters": 10,
+      "exact": false,
+      "question": true,
+      "missing_question": false,
+      "inserted_question": false
+    },
+    {
+      "id": "eval_clean/KsponSpeech_E02492.pcm",
+      "model": "base",
+      "seconds": 0.8849775000016962,
+      "audio_seconds": 6.147,
+      "edits": 5,
+      "reference_characters": 32,
+      "exact": false,
+      "question": false,
+      "missing_question": false,
+      "inserted_question": false
+    },
+    {
+      "id": "eval_clean/KsponSpeech_E02492.pcm",
+      "model": "small",
+      "seconds": 5.656705699999293,
+      "audio_seconds": 6.147,
+      "edits": 4,
+      "reference_characters": 32,
+      "exact": false,
+      "question": false,
+      "missing_question": false,
+      "inserted_question": false
+    },
+    {
+      "id": "eval_clean/KsponSpeech_E02198.pcm",
+      "model": "small",
+      "seconds": 3.110848199998145,
+      "audio_seconds": 1.861,
+      "edits": 3,
+      "reference_characters": 7,
+      "exact": false,
+      "question": true,
+      "missing_question": true,
+      "inserted_question": false
+    },
+    {
+      "id": "eval_clean/KsponSpeech_E02198.pcm",
+      "model": "base",
+      "seconds": 0.6431455999991158,
+      "audio_seconds": 1.861,
+      "edits": 4,
+      "reference_characters": 7,
+      "exact": false,
+      "question": true,
+      "missing_question": false,
+      "inserted_question": false
+    },
+    {
+      "id": "eval_clean/KsponSpeech_E00758.pcm",
+      "model": "base",
+      "seconds": 0.7905825000016193,
+      "audio_seconds": 6.944,
+      "edits": 0,
+      "reference_characters": 37,
+      "exact": true,
+      "question": true,
+      "missing_question": true,
+      "inserted_question": false
+    },
+    {
+      "id": "eval_clean/KsponSpeech_E00758.pcm",
+      "model": "small",
+      "seconds": 5.649053000001004,
+      "audio_seconds": 6.944,
+      "edits": 0,
+      "reference_characters": 37,
+      "exact": true,
+      "question": true,
+      "missing_question": true,
+      "inserted_question": false
+    },
+    {
+      "id": "eval_clean/KsponSpeech_E01338.pcm",
+      "model": "small",
+      "seconds": 4.496752200000628,
+      "audio_seconds": 2.551,
+      "edits": 0,
+      "reference_characters": 17,
+      "exact": true,
+      "question": false,
+      "missing_question": false,
+      "inserted_question": false
+    },
+    {
+      "id": "eval_clean/KsponSpeech_E01338.pcm",
+      "model": "base",
+      "seconds": 0.7368805999976757,
+      "audio_seconds": 2.551,
+      "edits": 6,
+      "reference_characters": 17,
+      "exact": false,
+      "question": false,
+      "missing_question": false,
+      "inserted_question": false
+    }
+  ],
+  "stt_pipeline": [
+    {
+      "id": "eval_clean/KsponSpeech_E00286.pcm",
+      "variant": "legacy",
+      "seconds": 1.4334645999988425,
+      "load_seconds": 0.6416718000000401,
+      "inference_seconds": 0.7917927999988024,
+      "turns": 1,
+      "submitted_seconds": 4.992,
+      "capture_end_seconds": 4.992,
+      "non_speech": false,
+      "over_five_seconds": false,
+      "edits": 7,
+      "reference_characters": 21,
+      "exact": false,
+      "question": false,
+      "missing_question": false,
+      "inserted_question": false,
+      "first_submission": {
+        "edits": 7,
+        "reference_characters": 21,
+        "exact": false,
+        "question": false,
+        "missing_question": false,
+        "inserted_question": false
+      }
+    },
+    {
+      "id": "eval_clean/KsponSpeech_E00286.pcm",
+      "variant": "reverse",
+      "seconds": 4.736215699998866,
+      "vad_seconds": 0.16796469999826513,
+      "inference_seconds": 4.5682510000006005,
+      "turns": 1,
+      "submitted_seconds": 4.512,
+      "capture_end_seconds": 5.216,
+      "non_speech": false,
+      "over_five_seconds": false,
+      "edits": 8,
+      "reference_characters": 21,
+      "exact": false,
+      "question": false,
+      "missing_question": false,
+      "inserted_question": false,
+      "first_submission": {
+        "edits": 8,
+        "reference_characters": 21,
+        "exact": false,
+        "question": false,
+        "missing_question": false,
+        "inserted_question": false
+      }
+    },
+    {
+      "id": "eval_clean/KsponSpeech_E02830.pcm",
+      "variant": "reverse",
+      "seconds": 8.339184500000556,
+      "vad_seconds": 0.11651390000042738,
+      "inference_seconds": 8.222670600000129,
+      "turns": 1,
+      "submitted_seconds": 8.0,
+      "capture_end_seconds": 8.704,
+      "non_speech": false,
+      "over_five_seconds": true,
+      "edits": 3,
+      "reference_characters": 50,
+      "exact": false,
+      "question": true,
+      "missing_question": false,
+      "inserted_question": false,
+      "first_submission": {
+        "edits": 3,
+        "reference_characters": 50,
+        "exact": false,
+        "question": true,
+        "missing_question": false,
+        "inserted_question": false
+      }
+    },
+    {
+      "id": "eval_clean/KsponSpeech_E02830.pcm",
+      "variant": "legacy",
+      "seconds": 1.5365858999975899,
+      "load_seconds": 0.6816822000000684,
+      "inference_seconds": 0.8549036999975215,
+      "turns": 1,
+      "submitted_seconds": 4.992,
+      "capture_end_seconds": 4.992,
+      "non_speech": false,
+      "over_five_seconds": true,
+      "edits": 18,
+      "reference_characters": 50,
+      "exact": false,
+      "question": true,
+      "missing_question": true,
+      "inserted_question": false,
+      "first_submission": {
+        "edits": 18,
+        "reference_characters": 50,
+        "exact": false,
+        "question": true,
+        "missing_question": true,
+        "inserted_question": false
+      }
+    },
+    {
+      "id": "eval_clean/KsponSpeech_E01368.pcm",
+      "variant": "legacy",
+      "seconds": 1.5773038000006636,
+      "load_seconds": 0.6975811999982398,
+      "inference_seconds": 0.8797226000024239,
+      "turns": 1,
+      "submitted_seconds": 4.992,
+      "capture_end_seconds": 4.992,
+      "non_speech": false,
+      "over_five_seconds": true,
+      "edits": 10,
+      "reference_characters": 27,
+      "exact": false,
+      "question": false,
+      "missing_question": false,
+      "inserted_question": false,
+      "first_submission": {
+        "edits": 10,
+        "reference_characters": 27,
+        "exact": false,
+        "question": false,
+        "missing_question": false,
+        "inserted_question": false
+      }
+    },
+    {
+      "id": "eval_clean/KsponSpeech_E01368.pcm",
+      "variant": "reverse",
+      "seconds": 7.019636399996671,
+      "vad_seconds": 0.08394739999857848,
+      "inference_seconds": 6.935688999998092,
+      "turns": 1,
+      "submitted_seconds": 5.664,
+      "capture_end_seconds": 6.368,
+      "non_speech": false,
+      "over_five_seconds": true,
+      "edits": 7,
+      "reference_characters": 27,
+      "exact": false,
+      "question": false,
+      "missing_question": false,
+      "inserted_question": false,
+      "first_submission": {
+        "edits": 7,
+        "reference_characters": 27,
+        "exact": false,
+        "question": false,
+        "missing_question": false,
+        "inserted_question": false
+      }
+    },
+    {
+      "id": "eval_clean/KsponSpeech_E01466.pcm",
+      "variant": "reverse",
+      "seconds": 5.089669400003913,
+      "vad_seconds": 0.06463640000220039,
+      "inference_seconds": 5.025033000001713,
+      "turns": 1,
+      "submitted_seconds": 3.36,
+      "capture_end_seconds": 4.288,
+      "non_speech": false,
+      "over_five_seconds": false,
+      "edits": 3,
+      "reference_characters": 21,
+      "exact": false,
+      "question": true,
+      "missing_question": false,
+      "inserted_question": false,
+      "first_submission": {
+        "edits": 3,
+        "reference_characters": 21,
+        "exact": false,
+        "question": true,
+        "missing_question": false,
+        "inserted_question": false
+      }
+    },
+    {
+      "id": "eval_clean/KsponSpeech_E01466.pcm",
+      "variant": "legacy",
+      "seconds": 1.4619865999993635,
+      "load_seconds": 0.6838778999990609,
+      "inference_seconds": 0.7781087000003026,
+      "turns": 1,
+      "submitted_seconds": 4.992,
+      "capture_end_seconds": 4.992,
+      "non_speech": false,
+      "over_five_seconds": false,
+      "edits": 5,
+      "reference_characters": 21,
+      "exact": false,
+      "question": true,
+      "missing_question": false,
+      "inserted_question": false,
+      "first_submission": {
+        "edits": 5,
+        "reference_characters": 21,
+        "exact": false,
+        "question": true,
+        "missing_question": false,
+        "inserted_question": false
+      }
+    },
+    {
+      "id": "eval_clean/KsponSpeech_E00749.pcm",
+      "variant": "legacy",
+      "seconds": 1.5177613999985624,
+      "load_seconds": 0.7373744999968039,
+      "inference_seconds": 0.7803869000017585,
+      "turns": 1,
+      "submitted_seconds": 4.992,
+      "capture_end_seconds": 4.992,
+      "non_speech": false,
+      "over_five_seconds": false,
+      "edits": 3,
+      "reference_characters": 22,
+      "exact": false,
+      "question": true,
+      "missing_question": false,
+      "inserted_question": false,
+      "first_submission": {
+        "edits": 3,
+        "reference_characters": 22,
+        "exact": false,
+        "question": true,
+        "missing_question": false,
+        "inserted_question": false
+      }
+    },
+    {
+      "id": "eval_clean/KsponSpeech_E00749.pcm",
+      "variant": "reverse",
+      "seconds": 4.69143239999903,
+      "vad_seconds": 0.056244699997478165,
+      "inference_seconds": 4.635187700001552,
+      "turns": 1,
+      "submitted_seconds": 2.56,
+      "capture_end_seconds": 3.264,
+      "non_speech": false,
+      "over_five_seconds": false,
+      "edits": 1,
+      "reference_characters": 22,
+      "exact": false,
+      "question": true,
+      "missing_question": false,
+      "inserted_question": false,
+      "first_submission": {
+        "edits": 1,
+        "reference_characters": 22,
+        "exact": false,
+        "question": true,
+        "missing_question": false,
+        "inserted_question": false
+      }
+    },
+    {
+      "id": "eval_clean/KsponSpeech_E02533.pcm",
+      "variant": "reverse",
+      "seconds": 4.789707099997031,
+      "vad_seconds": 0.05833599999823491,
+      "inference_seconds": 4.731371099998796,
+      "turns": 1,
+      "submitted_seconds": 2.72,
+      "capture_end_seconds": 3.424,
+      "non_speech": false,
+      "over_five_seconds": false,
+      "edits": 7,
+      "reference_characters": 17,
+      "exact": false,
+      "question": false,
+      "missing_question": false,
+      "inserted_question": false,
+      "first_submission": {
+        "edits": 7,
+        "reference_characters": 17,
+        "exact": false,
+        "question": false,
+        "missing_question": false,
+        "inserted_question": false
+      }
+    },
+    {
+      "id": "eval_clean/KsponSpeech_E02533.pcm",
+      "variant": "legacy",
+      "seconds": 5.094520200000261,
+      "load_seconds": 0.7067775999967125,
+      "inference_seconds": 4.387742600003548,
+      "turns": 1,
+      "submitted_seconds": 4.992,
+      "capture_end_seconds": 4.992,
+      "non_speech": false,
+      "over_five_seconds": false,
+      "edits": 16,
+      "reference_characters": 17,
+      "exact": false,
+      "question": false,
+      "missing_question": false,
+      "inserted_question": false,
+      "first_submission": {
+        "edits": 16,
+        "reference_characters": 17,
+        "exact": false,
+        "question": false,
+        "missing_question": false,
+        "inserted_question": false
+      }
+    },
+    {
+      "id": "eval_clean/KsponSpeech_E01046.pcm",
+      "variant": "legacy",
+      "seconds": 1.4775663999971584,
+      "load_seconds": 0.6686025999988487,
+      "inference_seconds": 0.8089637999983097,
+      "turns": 1,
+      "submitted_seconds": 4.992,
+      "capture_end_seconds": 4.992,
+      "non_speech": false,
+      "over_five_seconds": true,
+      "edits": 20,
+      "reference_characters": 42,
+      "exact": false,
+      "question": false,
+      "missing_question": false,
+      "inserted_question": false,
+      "first_submission": {
+        "edits": 20,
+        "reference_characters": 42,
+        "exact": false,
+        "question": false,
+        "missing_question": false,
+        "inserted_question": false
+      }
+    },
+    {
+      "id": "eval_clean/KsponSpeech_E01046.pcm",
+      "variant": "reverse",
+      "seconds": 6.450220900002023,
+      "vad_seconds": 0.11986330000218004,
+      "inference_seconds": 6.330357599999843,
+      "turns": 1,
+      "submitted_seconds": 6.976,
+      "capture_end_seconds": 8.224,
+      "non_speech": false,
+      "over_five_seconds": true,
+      "edits": 0,
+      "reference_characters": 42,
+      "exact": true,
+      "question": false,
+      "missing_question": false,
+      "inserted_question": false,
+      "first_submission": {
+        "edits": 0,
+        "reference_characters": 42,
+        "exact": true,
+        "question": false,
+        "missing_question": false,
+        "inserted_question": false
+      }
+    },
+    {
+      "id": "eval_clean/KsponSpeech_E01001.pcm",
+      "variant": "reverse",
+      "seconds": 3.0256731000008585,
+      "vad_seconds": 0.03758949999973993,
+      "inference_seconds": 2.9880836000011186,
+      "turns": 1,
+      "submitted_seconds": 1.568,
+      "capture_end_seconds": 2.272,
+      "non_speech": false,
+      "over_five_seconds": false,
+      "edits": 0,
+      "reference_characters": 7,
+      "exact": true,
+      "question": false,
+      "missing_question": false,
+      "inserted_question": false,
+      "first_submission": {
+        "edits": 0,
+        "reference_characters": 7,
+        "exact": true,
+        "question": false,
+        "missing_question": false,
+        "inserted_question": false
+      }
+    },
+    {
+      "id": "eval_clean/KsponSpeech_E01001.pcm",
+      "variant": "legacy",
+      "seconds": 4.705772400000569,
+      "load_seconds": 0.6723151999976835,
+      "inference_seconds": 4.033457200002886,
+      "turns": 1,
+      "submitted_seconds": 4.992,
+      "capture_end_seconds": 4.992,
+      "non_speech": false,
+      "over_five_seconds": false,
+      "edits": 15,
+      "reference_characters": 7,
+      "exact": false,
+      "question": false,
+      "missing_question": false,
+      "inserted_question": false,
+      "first_submission": {
+        "edits": 15,
+        "reference_characters": 7,
+        "exact": false,
+        "question": false,
+        "missing_question": false,
+        "inserted_question": false
+      }
+    },
+    {
+      "id": "eval_clean/KsponSpeech_E01852.pcm",
+      "variant": "legacy",
+      "seconds": 4.946542800000316,
+      "load_seconds": 0.7098092999985965,
+      "inference_seconds": 4.236733500001719,
+      "turns": 1,
+      "submitted_seconds": 4.992,
+      "capture_end_seconds": 4.992,
+      "non_speech": false,
+      "over_five_seconds": true,
+      "edits": 7,
+      "reference_characters": 9,
+      "exact": false,
+      "question": true,
+      "missing_question": true,
+      "inserted_question": false,
+      "first_submission": {
+        "edits": 7,
+        "reference_characters": 9,
+        "exact": false,
+        "question": true,
+        "missing_question": true,
+        "inserted_question": false
+      }
+    },
+    {
+      "id": "eval_clean/KsponSpeech_E01852.pcm",
+      "variant": "reverse",
+      "seconds": 6.126690999997663,
+      "vad_seconds": 0.0978992999989714,
+      "inference_seconds": 6.028791699998692,
+      "turns": 2,
+      "submitted_seconds": 4.384,
+      "capture_end_seconds": 6.24,
+      "non_speech": false,
+      "over_five_seconds": true,
+      "edits": 1,
+      "reference_characters": 9,
+      "exact": false,
+      "question": true,
+      "missing_question": false,
+      "inserted_question": false,
+      "first_submission": {
+        "edits": 7,
+        "reference_characters": 9,
+        "exact": false,
+        "question": true,
+        "missing_question": true,
+        "inserted_question": false
+      },
+      "first_submission_supplement_seconds": 2.8720575000006647
+    },
+    {
+      "id": "eval_clean/KsponSpeech_E01933.pcm",
+      "variant": "reverse",
+      "seconds": 3.7143732999975327,
+      "vad_seconds": 0.045066599999699974,
+      "inference_seconds": 3.6693066999978328,
+      "turns": 1,
+      "submitted_seconds": 1.856,
+      "capture_end_seconds": 2.56,
+      "non_speech": false,
+      "over_five_seconds": false,
+      "edits": 0,
+      "reference_characters": 11,
+      "exact": true,
+      "question": true,
+      "missing_question": false,
+      "inserted_question": false,
+      "first_submission": {
+        "edits": 0,
+        "reference_characters": 11,
+        "exact": true,
+        "question": true,
+        "missing_question": false,
+        "inserted_question": false
+      }
+    },
+    {
+      "id": "eval_clean/KsponSpeech_E01933.pcm",
+      "variant": "legacy",
+      "seconds": 1.3324092000002565,
+      "load_seconds": 0.6759257999983674,
+      "inference_seconds": 0.6564834000018891,
+      "turns": 1,
+      "submitted_seconds": 4.992,
+      "capture_end_seconds": 4.992,
+      "non_speech": false,
+      "over_five_seconds": false,
+      "edits": 3,
+      "reference_characters": 11,
+      "exact": false,
+      "question": true,
+      "missing_question": false,
+      "inserted_question": false,
+      "first_submission": {
+        "edits": 3,
+        "reference_characters": 11,
+        "exact": false,
+        "question": true,
+        "missing_question": false,
+        "inserted_question": false
+      }
+    },
+    {
+      "id": "eval_clean/KsponSpeech_E02763.pcm",
+      "variant": "legacy",
+      "seconds": 1.3897710999990522,
+      "load_seconds": 0.6835854999990261,
+      "inference_seconds": 0.7061856000000262,
+      "turns": 1,
+      "submitted_seconds": 4.992,
+      "capture_end_seconds": 4.992,
+      "non_speech": false,
+      "over_five_seconds": false,
+      "edits": 7,
+      "reference_characters": 12,
+      "exact": false,
+      "question": false,
+      "missing_question": false,
+      "inserted_question": false,
+      "first_submission": {
+        "edits": 7,
+        "reference_characters": 12,
+        "exact": false,
+        "question": false,
+        "missing_question": false,
+        "inserted_question": false
+      }
+    },
+    {
+      "id": "eval_clean/KsponSpeech_E02763.pcm",
+      "variant": "reverse",
+      "seconds": 4.070472100000188,
+      "vad_seconds": 0.04751820000092266,
+      "inference_seconds": 4.022953899999266,
+      "turns": 1,
+      "submitted_seconds": 1.696,
+      "capture_end_seconds": 2.496,
+      "non_speech": false,
+      "over_five_seconds": false,
+      "edits": 5,
+      "reference_characters": 12,
+      "exact": false,
+      "question": false,
+      "missing_question": false,
+      "inserted_question": false,
+      "first_submission": {
+        "edits": 5,
+        "reference_characters": 12,
+        "exact": false,
+        "question": false,
+        "missing_question": false,
+        "inserted_question": false
+      }
+    },
+    {
+      "id": "eval_clean/KsponSpeech_E00760.pcm",
+      "variant": "reverse",
+      "seconds": 3.6462332000010065,
+      "vad_seconds": 0.05079650000334368,
+      "inference_seconds": 3.595436699997663,
+      "turns": 1,
+      "submitted_seconds": 2.432,
+      "capture_end_seconds": 3.136,
+      "non_speech": false,
+      "over_five_seconds": false,
+      "edits": 0,
+      "reference_characters": 16,
+      "exact": true,
+      "question": false,
+      "missing_question": false,
+      "inserted_question": false,
+      "first_submission": {
+        "edits": 0,
+        "reference_characters": 16,
+        "exact": true,
+        "question": false,
+        "missing_question": false,
+        "inserted_question": false
+      }
+    },
+    {
+      "id": "eval_clean/KsponSpeech_E00760.pcm",
+      "variant": "legacy",
+      "seconds": 1.3570830000026035,
+      "load_seconds": 0.690816199999972,
+      "inference_seconds": 0.6662668000026315,
+      "turns": 1,
+      "submitted_seconds": 4.992,
+      "capture_end_seconds": 4.992,
+      "non_speech": false,
+      "over_five_seconds": false,
+      "edits": 2,
+      "reference_characters": 16,
+      "exact": false,
+      "question": false,
+      "missing_question": false,
+      "inserted_question": false,
+      "first_submission": {
+        "edits": 2,
+        "reference_characters": 16,
+        "exact": false,
+        "question": false,
+        "missing_question": false,
+        "inserted_question": false
+      }
+    },
+    {
+      "id": "eval_clean/KsponSpeech_E00492.pcm",
+      "variant": "legacy",
+      "seconds": 1.3586904000003415,
+      "load_seconds": 0.668974200001685,
+      "inference_seconds": 0.6897161999986565,
+      "turns": 1,
+      "submitted_seconds": 4.992,
+      "capture_end_seconds": 4.992,
+      "non_speech": false,
+      "over_five_seconds": false,
+      "edits": 4,
+      "reference_characters": 18,
+      "exact": false,
+      "question": false,
+      "missing_question": false,
+      "inserted_question": false,
+      "first_submission": {
+        "edits": 4,
+        "reference_characters": 18,
+        "exact": false,
+        "question": false,
+        "missing_question": false,
+        "inserted_question": false
+      }
+    },
+    {
+      "id": "eval_clean/KsponSpeech_E00492.pcm",
+      "variant": "reverse",
+      "seconds": 3.9864392999988922,
+      "vad_seconds": 0.04819589999897289,
+      "inference_seconds": 3.9382433999999193,
+      "turns": 1,
+      "submitted_seconds": 2.688,
+      "capture_end_seconds": 3.392,
+      "non_speech": false,
+      "over_five_seconds": false,
+      "edits": 4,
+      "reference_characters": 18,
+      "exact": false,
+      "question": false,
+      "missing_question": false,
+      "inserted_question": false,
+      "first_submission": {
+        "edits": 4,
+        "reference_characters": 18,
+        "exact": false,
+        "question": false,
+        "missing_question": false,
+        "inserted_question": false
+      }
+    },
+    {
+      "id": "eval_clean/KsponSpeech_E02986.pcm",
+      "variant": "reverse",
+      "seconds": 3.8487958000005165,
+      "vad_seconds": 0.05615770000076736,
+      "inference_seconds": 3.792638099999749,
+      "turns": 1,
+      "submitted_seconds": 2.464,
+      "capture_end_seconds": 3.168,
+      "non_speech": false,
+      "over_five_seconds": false,
+      "edits": 0,
+      "reference_characters": 16,
+      "exact": true,
+      "question": true,
+      "missing_question": true,
+      "inserted_question": false,
+      "first_submission": {
+        "edits": 0,
+        "reference_characters": 16,
+        "exact": true,
+        "question": true,
+        "missing_question": true,
+        "inserted_question": false
+      }
+    },
+    {
+      "id": "eval_clean/KsponSpeech_E02986.pcm",
+      "variant": "legacy",
+      "seconds": 1.4190968000002613,
+      "load_seconds": 0.7062277000004542,
+      "inference_seconds": 0.7128690999998071,
+      "turns": 1,
+      "submitted_seconds": 4.992,
+      "capture_end_seconds": 4.992,
+      "non_speech": false,
+      "over_five_seconds": false,
+      "edits": 2,
+      "reference_characters": 16,
+      "exact": false,
+      "question": true,
+      "missing_question": true,
+      "inserted_question": false,
+      "first_submission": {
+        "edits": 2,
+        "reference_characters": 16,
+        "exact": false,
+        "question": true,
+        "missing_question": true,
+        "inserted_question": false
+      }
+    },
+    {
+      "id": "eval_clean/KsponSpeech_E01059.pcm",
+      "variant": "legacy",
+      "seconds": 1.453641799998877,
+      "load_seconds": 0.7154735000003711,
+      "inference_seconds": 0.738168299998506,
+      "turns": 1,
+      "submitted_seconds": 4.992,
+      "capture_end_seconds": 4.992,
+      "non_speech": false,
+      "over_five_seconds": false,
+      "edits": 6,
+      "reference_characters": 16,
+      "exact": false,
+      "question": true,
+      "missing_question": true,
+      "inserted_question": false,
+      "first_submission": {
+        "edits": 6,
+        "reference_characters": 16,
+        "exact": false,
+        "question": true,
+        "missing_question": true,
+        "inserted_question": false
+      }
+    },
+    {
+      "id": "eval_clean/KsponSpeech_E01059.pcm",
+      "variant": "reverse",
+      "seconds": 4.7108812000005855,
+      "vad_seconds": 0.06248509999932139,
+      "inference_seconds": 4.648396100001264,
+      "turns": 1,
+      "submitted_seconds": 3.712,
+      "capture_end_seconds": 4.416,
+      "non_speech": false,
+      "over_five_seconds": false,
+      "edits": 2,
+      "reference_characters": 16,
+      "exact": false,
+      "question": true,
+      "missing_question": false,
+      "inserted_question": false,
+      "first_submission": {
+        "edits": 2,
+        "reference_characters": 16,
+        "exact": false,
+        "question": true,
+        "missing_question": false,
+        "inserted_question": false
+      }
+    },
+    {
+      "id": "eval_clean/KsponSpeech_E02585.pcm",
+      "variant": "reverse",
+      "seconds": 8.239172400000825,
+      "vad_seconds": 0.10695829999895068,
+      "inference_seconds": 8.132214100001875,
+      "turns": 1,
+      "submitted_seconds": 8.032,
+      "capture_end_seconds": 8.736,
+      "non_speech": false,
+      "over_five_seconds": true,
+      "edits": 5,
+      "reference_characters": 53,
+      "exact": false,
+      "question": false,
+      "missing_question": false,
+      "inserted_question": false,
+      "first_submission": {
+        "edits": 5,
+        "reference_characters": 53,
+        "exact": false,
+        "question": false,
+        "missing_question": false,
+        "inserted_question": false
+      }
+    },
+    {
+      "id": "eval_clean/KsponSpeech_E02585.pcm",
+      "variant": "legacy",
+      "seconds": 1.7548710999981267,
+      "load_seconds": 0.8796242999997048,
+      "inference_seconds": 0.8752467999984219,
+      "turns": 1,
+      "submitted_seconds": 4.992,
+      "capture_end_seconds": 4.992,
+      "non_speech": false,
+      "over_five_seconds": true,
+      "edits": 28,
+      "reference_characters": 53,
+      "exact": false,
+      "question": false,
+      "missing_question": false,
+      "inserted_question": false,
+      "first_submission": {
+        "edits": 28,
+        "reference_characters": 53,
+        "exact": false,
+        "question": false,
+        "missing_question": false,
+        "inserted_question": false
+      }
+    },
+    {
+      "id": "eval_clean/KsponSpeech_E02556.pcm",
+      "variant": "legacy",
+      "seconds": 1.4294617000014114,
+      "load_seconds": 0.7453118999983417,
+      "inference_seconds": 0.6841498000030697,
+      "turns": 1,
+      "submitted_seconds": 4.992,
+      "capture_end_seconds": 4.992,
+      "non_speech": false,
+      "over_five_seconds": false,
+      "edits": 2,
+      "reference_characters": 10,
+      "exact": false,
+      "question": false,
+      "missing_question": false,
+      "inserted_question": false,
+      "first_submission": {
+        "edits": 2,
+        "reference_characters": 10,
+        "exact": false,
+        "question": false,
+        "missing_question": false,
+        "inserted_question": false
+      }
+    },
+    {
+      "id": "eval_clean/KsponSpeech_E02556.pcm",
+      "variant": "reverse",
+      "seconds": 3.497864099997969,
+      "vad_seconds": 0.043772199998784345,
+      "inference_seconds": 3.4540918999991845,
+      "turns": 1,
+      "submitted_seconds": 1.888,
+      "capture_end_seconds": 2.688,
+      "non_speech": false,
+      "over_five_seconds": false,
+      "edits": 2,
+      "reference_characters": 10,
+      "exact": false,
+      "question": false,
+      "missing_question": false,
+      "inserted_question": false,
+      "first_submission": {
+        "edits": 2,
+        "reference_characters": 10,
+        "exact": false,
+        "question": false,
+        "missing_question": false,
+        "inserted_question": false
+      }
+    },
+    {
+      "id": "eval_clean/KsponSpeech_E01885.pcm",
+      "variant": "reverse",
+      "seconds": 8.851032300000952,
+      "vad_seconds": 0.12128959999972722,
+      "inference_seconds": 8.729742700001225,
+      "turns": 2,
+      "submitted_seconds": 7.008,
+      "capture_end_seconds": 8.8,
+      "non_speech": false,
+      "over_five_seconds": true,
+      "edits": 0,
+      "reference_characters": 32,
+      "exact": true,
+      "question": true,
+      "missing_question": true,
+      "inserted_question": false,
+      "first_submission": {
+        "edits": 31,
+        "reference_characters": 32,
+        "exact": false,
+        "question": true,
+        "missing_question": true,
+        "inserted_question": false
+      },
+      "first_submission_supplement_seconds": 2.445424500001536
+    },
+    {
+      "id": "eval_clean/KsponSpeech_E01885.pcm",
+      "variant": "legacy",
+      "seconds": 1.4102568999987852,
+      "load_seconds": 0.693391500000871,
+      "inference_seconds": 0.7168653999979142,
+      "turns": 1,
+      "submitted_seconds": 4.992,
+      "capture_end_seconds": 4.992,
+      "non_speech": false,
+      "over_five_seconds": true,
+      "edits": 17,
+      "reference_characters": 32,
+      "exact": false,
+      "question": true,
+      "missing_question": true,
+      "inserted_question": false,
+      "first_submission": {
+        "edits": 17,
+        "reference_characters": 32,
+        "exact": false,
+        "question": true,
+        "missing_question": true,
+        "inserted_question": false
+      }
+    },
+    {
+      "id": "eval_clean/KsponSpeech_E01743.pcm",
+      "variant": "legacy",
+      "seconds": 1.3493538000002445,
+      "load_seconds": 0.6611454999983835,
+      "inference_seconds": 0.6882083000018611,
+      "turns": 1,
+      "submitted_seconds": 4.992,
+      "capture_end_seconds": 4.992,
+      "non_speech": false,
+      "over_five_seconds": false,
+      "edits": 2,
+      "reference_characters": 8,
+      "exact": false,
+      "question": true,
+      "missing_question": true,
+      "inserted_question": false,
+      "first_submission": {
+        "edits": 2,
+        "reference_characters": 8,
+        "exact": false,
+        "question": true,
+        "missing_question": true,
+        "inserted_question": false
+      }
+    },
+    {
+      "id": "eval_clean/KsponSpeech_E01743.pcm",
+      "variant": "reverse",
+      "seconds": 3.4277819999952044,
+      "vad_seconds": 0.03968469999745139,
+      "inference_seconds": 3.388097299997753,
+      "turns": 1,
+      "submitted_seconds": 1.6,
+      "capture_end_seconds": 2.432,
+      "non_speech": false,
+      "over_five_seconds": false,
+      "edits": 1,
+      "reference_characters": 8,
+      "exact": false,
+      "question": true,
+      "missing_question": true,
+      "inserted_question": false,
+      "first_submission": {
+        "edits": 1,
+        "reference_characters": 8,
+        "exact": false,
+        "question": true,
+        "missing_question": true,
+        "inserted_question": false
+      }
+    },
+    {
+      "id": "eval_clean/KsponSpeech_E02435.pcm",
+      "variant": "reverse",
+      "seconds": 3.897657599998638,
+      "vad_seconds": 0.04802740000013728,
+      "inference_seconds": 3.8496301999985008,
+      "turns": 1,
+      "submitted_seconds": 2.144,
+      "capture_end_seconds": 2.848,
+      "non_speech": false,
+      "over_five_seconds": false,
+      "edits": 1,
+      "reference_characters": 10,
+      "exact": false,
+      "question": true,
+      "missing_question": true,
+      "inserted_question": false,
+      "first_submission": {
+        "edits": 1,
+        "reference_characters": 10,
+        "exact": false,
+        "question": true,
+        "missing_question": true,
+        "inserted_question": false
+      }
+    },
+    {
+      "id": "eval_clean/KsponSpeech_E02435.pcm",
+      "variant": "legacy",
+      "seconds": 4.915208200000052,
+      "load_seconds": 0.6915258999979415,
+      "inference_seconds": 4.22368230000211,
+      "turns": 1,
+      "submitted_seconds": 4.992,
+      "capture_end_seconds": 4.992,
+      "non_speech": false,
+      "over_five_seconds": false,
+      "edits": 4,
+      "reference_characters": 10,
+      "exact": false,
+      "question": true,
+      "missing_question": true,
+      "inserted_question": false,
+      "first_submission": {
+        "edits": 4,
+        "reference_characters": 10,
+        "exact": false,
+        "question": true,
+        "missing_question": true,
+        "inserted_question": false
+      }
+    },
+    {
+      "id": "eval_clean/KsponSpeech_E02492.pcm",
+      "variant": "legacy",
+      "seconds": 1.3551733999993303,
+      "load_seconds": 0.6518508000008296,
+      "inference_seconds": 0.7033225999985007,
+      "turns": 1,
+      "submitted_seconds": 4.992,
+      "capture_end_seconds": 4.992,
+      "non_speech": false,
+      "over_five_seconds": true,
+      "edits": 10,
+      "reference_characters": 32,
+      "exact": false,
+      "question": false,
+      "missing_question": false,
+      "inserted_question": false,
+      "first_submission": {
+        "edits": 10,
+        "reference_characters": 32,
+        "exact": false,
+        "question": false,
+        "missing_question": false,
+        "inserted_question": false
+      }
+    },
+    {
+      "id": "eval_clean/KsponSpeech_E02492.pcm",
+      "variant": "reverse",
+      "seconds": 8.106245599999966,
+      "vad_seconds": 0.0839391000008618,
+      "inference_seconds": 8.022306499999104,
+      "turns": 2,
+      "submitted_seconds": 5.248,
+      "capture_end_seconds": 6.816,
+      "non_speech": false,
+      "over_five_seconds": true,
+      "edits": 4,
+      "reference_characters": 32,
+      "exact": false,
+      "question": false,
+      "missing_question": false,
+      "inserted_question": false,
+      "first_submission": {
+        "edits": 19,
+        "reference_characters": 32,
+        "exact": false,
+        "question": false,
+        "missing_question": false,
+        "inserted_question": false
+      },
+      "first_submission_supplement_seconds": 3.6078331999997317
+    },
+    {
+      "id": "eval_clean/KsponSpeech_E02198.pcm",
+      "variant": "reverse",
+      "seconds": 3.1408622000017203,
+      "vad_seconds": 0.04067620000205352,
+      "inference_seconds": 3.100185999999667,
+      "turns": 1,
+      "submitted_seconds": 1.376,
+      "capture_end_seconds": 2.656,
+      "non_speech": false,
+      "over_five_seconds": false,
+      "edits": 4,
+      "reference_characters": 7,
+      "exact": false,
+      "question": true,
+      "missing_question": true,
+      "inserted_question": false,
+      "first_submission": {
+        "edits": 4,
+        "reference_characters": 7,
+        "exact": false,
+        "question": true,
+        "missing_question": true,
+        "inserted_question": false
+      }
+    },
+    {
+      "id": "eval_clean/KsponSpeech_E02198.pcm",
+      "variant": "legacy",
+      "seconds": 1.326772799999162,
+      "load_seconds": 0.6752047000009043,
+      "inference_seconds": 0.6515680999982578,
+      "turns": 1,
+      "submitted_seconds": 4.992,
+      "capture_end_seconds": 4.992,
+      "non_speech": false,
+      "over_five_seconds": false,
+      "edits": 4,
+      "reference_characters": 7,
+      "exact": false,
+      "question": true,
+      "missing_question": false,
+      "inserted_question": false,
+      "first_submission": {
+        "edits": 4,
+        "reference_characters": 7,
+        "exact": false,
+        "question": true,
+        "missing_question": false,
+        "inserted_question": false
+      }
+    },
+    {
+      "id": "eval_clean/KsponSpeech_E00758.pcm",
+      "variant": "legacy",
+      "seconds": 1.427227899999707,
+      "load_seconds": 0.6829371999992873,
+      "inference_seconds": 0.7442907000004197,
+      "turns": 1,
+      "submitted_seconds": 4.992,
+      "capture_end_seconds": 4.992,
+      "non_speech": false,
+      "over_five_seconds": true,
+      "edits": 11,
+      "reference_characters": 37,
+      "exact": false,
+      "question": true,
+      "missing_question": true,
+      "inserted_question": false,
+      "first_submission": {
+        "edits": 11,
+        "reference_characters": 37,
+        "exact": false,
+        "question": true,
+        "missing_question": true,
+        "inserted_question": false
+      }
+    },
+    {
+      "id": "eval_clean/KsponSpeech_E00758.pcm",
+      "variant": "reverse",
+      "seconds": 5.640974899997673,
+      "vad_seconds": 0.09724149999965448,
+      "inference_seconds": 5.543733399998018,
+      "turns": 1,
+      "submitted_seconds": 6.88,
+      "capture_end_seconds": 7.584,
+      "non_speech": false,
+      "over_five_seconds": true,
+      "edits": 0,
+      "reference_characters": 37,
+      "exact": true,
+      "question": true,
+      "missing_question": true,
+      "inserted_question": false,
+      "first_submission": {
+        "edits": 0,
+        "reference_characters": 37,
+        "exact": true,
+        "question": true,
+        "missing_question": true,
+        "inserted_question": false
+      }
+    },
+    {
+      "id": "eval_clean/KsponSpeech_E01338.pcm",
+      "variant": "reverse",
+      "seconds": 4.608487100002094,
+      "vad_seconds": 0.05003430000215303,
+      "inference_seconds": 4.558452799999941,
+      "turns": 1,
+      "submitted_seconds": 2.624,
+      "capture_end_seconds": 3.424,
+      "non_speech": false,
+      "over_five_seconds": false,
+      "edits": 0,
+      "reference_characters": 17,
+      "exact": true,
+      "question": false,
+      "missing_question": false,
+      "inserted_question": false,
+      "first_submission": {
+        "edits": 0,
+        "reference_characters": 17,
+        "exact": true,
+        "question": false,
+        "missing_question": false,
+        "inserted_question": false
+      }
+    },
+    {
+      "id": "eval_clean/KsponSpeech_E01338.pcm",
+      "variant": "legacy",
+      "seconds": 1.4525087000001804,
+      "load_seconds": 0.6870612000020628,
+      "inference_seconds": 0.7654474999981176,
+      "turns": 1,
+      "submitted_seconds": 4.992,
+      "capture_end_seconds": 4.992,
+      "non_speech": false,
+      "over_five_seconds": false,
+      "edits": 6,
+      "reference_characters": 17,
+      "exact": false,
+      "question": false,
+      "missing_question": false,
+      "inserted_question": false,
+      "first_submission": {
+        "edits": 6,
+        "reference_characters": 17,
+        "exact": false,
+        "question": false,
+        "missing_question": false,
+        "inserted_question": false
+      }
+    },
+    {
+      "id": "silence-5s",
+      "variant": "legacy",
+      "seconds": 1.4630934000015259,
+      "load_seconds": 0.7975053000009211,
+      "inference_seconds": 0.6655881000006048,
+      "turns": 1,
+      "submitted_seconds": 4.992,
+      "capture_end_seconds": 4.992,
+      "non_speech": true,
+      "over_five_seconds": true,
+      "edits": 0,
+      "reference_characters": 0,
+      "exact": true,
+      "question": false,
+      "missing_question": false,
+      "inserted_question": false,
+      "first_submission": {
+        "edits": 0,
+        "reference_characters": 0,
+        "exact": true,
+        "question": false,
+        "missing_question": false,
+        "inserted_question": false
+      }
+    },
+    {
+      "id": "silence-5s",
+      "variant": "reverse",
+      "seconds": 0.0742718999972567,
+      "vad_seconds": 0.07426529999793274,
+      "inference_seconds": 6.599999323952943e-06,
+      "turns": 0,
+      "submitted_seconds": 0.0,
+      "capture_end_seconds": null,
+      "non_speech": true,
+      "over_five_seconds": true,
+      "edits": 0,
+      "reference_characters": 0,
+      "exact": true,
+      "question": false,
+      "missing_question": false,
+      "inserted_question": false,
+      "first_submission": {
+        "edits": 0,
+        "reference_characters": 0,
+        "exact": true,
+        "question": false,
+        "missing_question": false,
+        "inserted_question": false
+      }
+    },
+    {
+      "id": "silence-12s",
+      "variant": "reverse",
+      "seconds": 0.16543780000210973,
+      "vad_seconds": 0.1654314000006707,
+      "inference_seconds": 6.400001439033076e-06,
+      "turns": 0,
+      "submitted_seconds": 0.0,
+      "capture_end_seconds": null,
+      "non_speech": true,
+      "over_five_seconds": true,
+      "edits": 0,
+      "reference_characters": 0,
+      "exact": true,
+      "question": false,
+      "missing_question": false,
+      "inserted_question": false,
+      "first_submission": {
+        "edits": 0,
+        "reference_characters": 0,
+        "exact": true,
+        "question": false,
+        "missing_question": false,
+        "inserted_question": false
+      }
+    },
+    {
+      "id": "silence-12s",
+      "variant": "legacy",
+      "seconds": 1.3856839000000036,
+      "load_seconds": 0.7089006999995036,
+      "inference_seconds": 0.6767832000005001,
+      "turns": 1,
+      "submitted_seconds": 4.992,
+      "capture_end_seconds": 4.992,
+      "non_speech": true,
+      "over_five_seconds": true,
+      "edits": 0,
+      "reference_characters": 0,
+      "exact": true,
+      "question": false,
+      "missing_question": false,
+      "inserted_question": false,
+      "first_submission": {
+        "edits": 0,
+        "reference_characters": 0,
+        "exact": true,
+        "question": false,
+        "missing_question": false,
+        "inserted_question": false
+      }
+    },
+    {
+      "id": "white-noise-quiet",
+      "variant": "legacy",
+      "seconds": 1.3799219000029552,
+      "load_seconds": 0.7460903000028338,
+      "inference_seconds": 0.6338316000001214,
+      "turns": 1,
+      "submitted_seconds": 4.992,
+      "capture_end_seconds": 4.992,
+      "non_speech": true,
+      "over_five_seconds": true,
+      "edits": 0,
+      "reference_characters": 0,
+      "exact": true,
+      "question": false,
+      "missing_question": false,
+      "inserted_question": false,
+      "first_submission": {
+        "edits": 0,
+        "reference_characters": 0,
+        "exact": true,
+        "question": false,
+        "missing_question": false,
+        "inserted_question": false
+      }
+    },
+    {
+      "id": "white-noise-quiet",
+      "variant": "reverse",
+      "seconds": 0.07656570000108331,
+      "vad_seconds": 0.07656040000074427,
+      "inference_seconds": 5.300000339047983e-06,
+      "turns": 0,
+      "submitted_seconds": 0.0,
+      "capture_end_seconds": null,
+      "non_speech": true,
+      "over_five_seconds": true,
+      "edits": 0,
+      "reference_characters": 0,
+      "exact": true,
+      "question": false,
+      "missing_question": false,
+      "inserted_question": false,
+      "first_submission": {
+        "edits": 0,
+        "reference_characters": 0,
+        "exact": true,
+        "question": false,
+        "missing_question": false,
+        "inserted_question": false
+      }
+    },
+    {
+      "id": "white-noise-loud",
+      "variant": "reverse",
+      "seconds": 0.09278900000208523,
+      "vad_seconds": 0.0927811000001384,
+      "inference_seconds": 7.90000194683671e-06,
+      "turns": 0,
+      "submitted_seconds": 0.0,
+      "capture_end_seconds": null,
+      "non_speech": true,
+      "over_five_seconds": true,
+      "edits": 0,
+      "reference_characters": 0,
+      "exact": true,
+      "question": false,
+      "missing_question": false,
+      "inserted_question": false,
+      "first_submission": {
+        "edits": 0,
+        "reference_characters": 0,
+        "exact": true,
+        "question": false,
+        "missing_question": false,
+        "inserted_question": false
+      }
+    },
+    {
+      "id": "white-noise-loud",
+      "variant": "legacy",
+      "seconds": 1.3451681999977154,
+      "load_seconds": 0.6854415000016161,
+      "inference_seconds": 0.6597266999960993,
+      "turns": 1,
+      "submitted_seconds": 4.992,
+      "capture_end_seconds": 4.992,
+      "non_speech": true,
+      "over_five_seconds": true,
+      "edits": 0,
+      "reference_characters": 0,
+      "exact": true,
+      "question": false,
+      "missing_question": false,
+      "inserted_question": false,
+      "first_submission": {
+        "edits": 0,
+        "reference_characters": 0,
+        "exact": true,
+        "question": false,
+        "missing_question": false,
+        "inserted_question": false
+      }
+    }
+  ],
+  "rag_positive": [
+    {
+      "fixture": "dog",
+      "style": "paraphrase",
+      "hit": true,
+      "results": 1,
+      "seconds": 0.018626000000949716
+    },
+    {
+      "fixture": "dog",
+      "style": "same_text",
+      "hit": true,
+      "results": 1,
+      "seconds": 0.022335099998599617
+    },
+    {
+      "fixture": "project",
+      "style": "paraphrase",
+      "hit": true,
+      "results": 1,
+      "seconds": 0.018038300000625895
+    },
+    {
+      "fixture": "project",
+      "style": "same_text",
+      "hit": true,
+      "results": 1,
+      "seconds": 0.019110000001091976
+    },
+    {
+      "fixture": "boardgame",
+      "style": "paraphrase",
+      "hit": true,
+      "results": 1,
+      "seconds": 0.02126510000016424
+    },
+    {
+      "fixture": "boardgame",
+      "style": "same_text",
+      "hit": true,
+      "results": 1,
+      "seconds": 0.02295130000129575
+    },
+    {
+      "fixture": "snack",
+      "style": "paraphrase",
+      "hit": true,
+      "results": 1,
+      "seconds": 0.01751950000107172
+    },
+    {
+      "fixture": "snack",
+      "style": "same_text",
+      "hit": true,
+      "results": 1,
+      "seconds": 0.020257400003174553
+    },
+    {
+      "fixture": "plant",
+      "style": "paraphrase",
+      "hit": true,
+      "results": 1,
+      "seconds": 0.02088480000020354
+    },
+    {
+      "fixture": "plant",
+      "style": "same_text",
+      "hit": true,
+      "results": 1,
+      "seconds": 0.02206819999992149
+    },
+    {
+      "fixture": "instrument",
+      "style": "paraphrase",
+      "hit": true,
+      "results": 1,
+      "seconds": 0.021738499999628402
+    },
+    {
+      "fixture": "instrument",
+      "style": "same_text",
+      "hit": true,
+      "results": 1,
+      "seconds": 0.021810599999298574
+    }
+  ],
+  "rag_negative": [
+    {
+      "results": 0,
+      "seconds": 0.021821700000145938
+    },
+    {
+      "results": 0,
+      "seconds": 0.015488500001083594
+    },
+    {
+      "results": 0,
+      "seconds": 0.01747590000013588
+    },
+    {
+      "results": 0,
+      "seconds": 0.017742800002451986
+    },
+    {
+      "results": 0,
+      "seconds": 0.015686899998399895
+    },
+    {
+      "results": 0,
+      "seconds": 0.018483600000763545
+    }
+  ],
+  "rag_generation": [
+    {
+      "fixture": "dog",
+      "variant": "legacy",
+      "hit": false,
+      "seconds": 1.3624302000025637,
+      "usage": {
+        "input_tokens": 503,
+        "output_tokens": 50,
+        "total_tokens": 553,
+        "input_token_details": {
+          "cache_read": 0
+        }
+      },
+      "retrieval_results": 0
+    },
+    {
+      "fixture": "dog",
+      "variant": "reverse",
+      "hit": true,
+      "seconds": 1.4029508000021451,
+      "usage": {
+        "input_tokens": 1787,
+        "output_tokens": 22,
+        "total_tokens": 1809,
+        "input_token_details": {
+          "cache_read": 0
+        }
+      },
+      "retrieval_results": 1
+    },
+    {
+      "fixture": "project",
+      "variant": "reverse",
+      "hit": true,
+      "seconds": 1.3523700000005192,
+      "usage": {
+        "input_tokens": 1780,
+        "output_tokens": 21,
+        "total_tokens": 1801,
+        "input_token_details": {
+          "cache_read": 0
+        }
+      },
+      "retrieval_results": 1
+    },
+    {
+      "fixture": "project",
+      "variant": "legacy",
+      "hit": false,
+      "seconds": 1.7318204999974114,
+      "usage": {
+        "input_tokens": 503,
+        "output_tokens": 101,
+        "total_tokens": 604,
+        "input_token_details": {
+          "cache_read": 0
+        }
+      },
+      "retrieval_results": 0
+    },
+    {
+      "fixture": "boardgame",
+      "variant": "legacy",
+      "hit": false,
+      "seconds": 1.3819670999982918,
+      "usage": {
+        "input_tokens": 505,
+        "output_tokens": 69,
+        "total_tokens": 574,
+        "input_token_details": {
+          "cache_read": 0
+        }
+      },
+      "retrieval_results": 0
+    },
+    {
+      "fixture": "boardgame",
+      "variant": "reverse",
+      "hit": true,
+      "seconds": 1.312881899997592,
+      "usage": {
+        "input_tokens": 1774,
+        "output_tokens": 14,
+        "total_tokens": 1788,
+        "input_token_details": {
+          "cache_read": 0
+        }
+      },
+      "retrieval_results": 1
+    },
+    {
+      "fixture": "snack",
+      "variant": "reverse",
+      "hit": true,
+      "seconds": 1.2414829999979702,
+      "usage": {
+        "input_tokens": 1770,
+        "output_tokens": 23,
+        "total_tokens": 1793,
+        "input_token_details": {
+          "cache_read": 0
+        }
+      },
+      "retrieval_results": 1
+    },
+    {
+      "fixture": "snack",
+      "variant": "legacy",
+      "hit": false,
+      "seconds": 1.3829939999995986,
+      "usage": {
+        "input_tokens": 502,
+        "output_tokens": 67,
+        "total_tokens": 569,
+        "input_token_details": {
+          "cache_read": 0
+        }
+      },
+      "retrieval_results": 0
+    }
+  ]
+}

@@ -1,0 +1,615 @@
+{
+  "llm": {
+    "legacy": {
+      "responses": 12,
+      "completion_seconds": {
+        "n": 12,
+        "mean": 2.137030741666422,
+        "median": 1.465621449999162,
+        "min": 1.0802856999980577,
+        "max": 9.474442499998986,
+        "p90": 1.8052349500001583
+      },
+      "first_text_seconds": {
+        "n": 12,
+        "mean": 2.137030741666422,
+        "median": 1.465621449999162,
+        "min": 1.0802856999980577,
+        "max": 9.474442499998986,
+        "p90": 1.8052349500001583
+      },
+      "characters": {
+        "n": 12,
+        "mean": 159.25,
+        "median": 147.0,
+        "min": 53,
+        "max": 267,
+        "p90": 245.4
+      },
+      "input_tokens": {
+        "n": 12,
+        "mean": 607.5,
+        "median": 603.0,
+        "min": 496,
+        "max": 808,
+        "p90": 772.1
+      },
+      "output_tokens": {
+        "n": 12,
+        "mean": 95.58333333333333,
+        "median": 90.5,
+        "min": 31,
+        "max": 155,
+        "p90": 137.1
+      },
+      "total_tokens": {
+        "n": 12,
+        "mean": 703.0833333333334,
+        "median": 690.5,
+        "min": 527,
+        "max": 906,
+        "p90": 874.8000000000001
+      },
+      "question_responses": 12,
+      "questions": 32,
+      "within_session_fact_hits": 2,
+      "within_session_fact_tests": 2,
+      "sum_input_tokens": 7290,
+      "sum_output_tokens": 1147,
+      "completion_without_first_pair": {
+        "n": 11,
+        "mean": 1.4699933090907342,
+        "median": 1.4294045999995433,
+        "min": 1.0802856999980577,
+        "max": 1.8245561000003363,
+        "p90": 1.631344599998556
+      }
+    },
+    "reverse": {
+      "responses": 12,
+      "completion_seconds": {
+        "n": 12,
+        "mean": 1.9692838333333686,
+        "median": 1.2380151500001375,
+        "min": 0.789340399998764,
+        "max": 8.795368499999313,
+        "p90": 3.0787720999978783
+      },
+      "first_text_seconds": {
+        "n": 12,
+        "mean": 1.9334479333335064,
+        "median": 1.235775499999363,
+        "min": 0.7877893000004406,
+        "max": 8.58320680000179,
+        "p90": 3.0769789599980877
+      },
+      "characters": {
+        "n": 12,
+        "mean": 43.083333333333336,
+        "median": 37.0,
+        "min": 16,
+        "max": 101,
+        "p90": 66.5
+      },
+      "input_tokens": {
+        "n": 12,
+        "mean": 1660.0833333333333,
+        "median": 1662.0,
+        "min": 1614,
+        "max": 1750,
+        "p90": 1702.4
+      },
+      "output_tokens": {
+        "n": 12,
+        "mean": 25.916666666666668,
+        "median": 24.5,
+        "min": 9,
+        "max": 53,
+        "p90": 37.2
+      },
+      "total_tokens": {
+        "n": 12,
+        "mean": 1686,
+        "median": 1686.0,
+        "min": 1623,
+        "max": 1780,
+        "p90": 1729.5
+      },
+      "question_responses": 7,
+      "questions": 7,
+      "within_session_fact_hits": 2,
+      "within_session_fact_tests": 2,
+      "sum_input_tokens": 19921,
+      "sum_output_tokens": 311,
+      "completion_without_first_pair": {
+        "n": 11,
+        "mean": 2.012038600000034,
+        "median": 1.1768229000008432,
+        "min": 0.789340399998764,
+        "max": 8.795368499999313,
+        "p90": 3.254304399997636
+      }
+    }
+  },
+  "llm_errors": [
+    "GoogleRateLimitError"
+  ],
+  "model_only": {
+    "base": {
+      "n": 24,
+      "reference_characters": 511,
+      "edits": 119,
+      "cer": 0.2328767123287671,
+      "exact_matches": 1,
+      "question_samples": 12,
+      "missing_questions": 4,
+      "inserted_questions": 0,
+      "processing_seconds": {
+        "n": 24,
+        "mean": 1.0688239333330785,
+        "median": 0.7636780499979068,
+        "min": 0.6180585000001884,
+        "max": 4.422191400000884,
+        "p90": 1.2735971199985212
+      }
+    },
+    "small": {
+      "n": 24,
+      "reference_characters": 511,
+      "edits": 52,
+      "cer": 0.10176125244618395,
+      "exact_matches": 8,
+      "question_samples": 12,
+      "missing_questions": 5,
+      "inserted_questions": 0,
+      "processing_seconds": {
+        "n": 24,
+        "mean": 4.728728820833567,
+        "median": 4.435140749998027,
+        "min": 3.110848199998145,
+        "max": 8.009332700003142,
+        "p90": 6.717809750000015
+      }
+    }
+  },
+  "model_initial_load_seconds": {
+    "base": 0.6329654999972263,
+    "small": 2.0900413999988814
+  },
+  "pipeline": {
+    "legacy": {
+      "n": 24,
+      "reference_characters": 511,
+      "edits": 209,
+      "cer": 0.4090019569471624,
+      "exact_matches": 0,
+      "question_samples": 12,
+      "missing_questions": 8,
+      "inserted_questions": 0,
+      "processing_seconds": {
+        "n": 24,
+        "mean": 2.020126287499655,
+        "median": 1.4429866499995114,
+        "min": 1.326772799999162,
+        "max": 5.094520200000261,
+        "p90": 4.8523774600002065
+      },
+      "short": {
+        "n": 16,
+        "reference_characters": 229,
+        "edits": 88,
+        "cer": 0.38427947598253276,
+        "exact_matches": 0,
+        "question_samples": 8,
+        "missing_questions": 4,
+        "inserted_questions": 0,
+        "processing_seconds": {
+          "n": 16,
+          "mean": 2.0623439187500026,
+          "median": 1.431463150000127,
+          "min": 1.326772799999162,
+          "max": 5.094520200000261,
+          "p90": 4.8104903000003105
+        }
+      },
+      "long": {
+        "n": 8,
+        "reference_characters": 282,
+        "edits": 121,
+        "cer": 0.42907801418439717,
+        "exact_matches": 0,
+        "question_samples": 4,
+        "missing_questions": 4,
+        "inserted_questions": 0,
+        "processing_seconds": {
+          "n": 8,
+          "mean": 1.9356910249989596,
+          "median": 1.5070761499973742,
+          "min": 1.3551733999993303,
+          "max": 4.946542800000316,
+          "p90": 2.712372609998783
+        }
+      },
+      "first_submission_all": {
+        "n": 24,
+        "reference_characters": 511,
+        "edits": 209,
+        "cer": 0.4090019569471624,
+        "exact_matches": 0,
+        "question_samples": 12,
+        "missing_questions": 8,
+        "inserted_questions": 0,
+        "processing_seconds": {
+          "n": 24,
+          "mean": 2.020126287499655,
+          "median": 1.4429866499995114,
+          "min": 1.326772799999162,
+          "max": 5.094520200000261,
+          "p90": 4.8523774600002065
+        }
+      },
+      "first_submission_short": {
+        "n": 16,
+        "reference_characters": 229,
+        "edits": 88,
+        "cer": 0.38427947598253276,
+        "exact_matches": 0,
+        "question_samples": 8,
+        "missing_questions": 4,
+        "inserted_questions": 0,
+        "processing_seconds": {
+          "n": 16,
+          "mean": 2.0623439187500026,
+          "median": 1.431463150000127,
+          "min": 1.326772799999162,
+          "max": 5.094520200000261,
+          "p90": 4.8104903000003105
+        }
+      },
+      "first_submission_long": {
+        "n": 8,
+        "reference_characters": 282,
+        "edits": 121,
+        "cer": 0.42907801418439717,
+        "exact_matches": 0,
+        "question_samples": 4,
+        "missing_questions": 4,
+        "inserted_questions": 0,
+        "processing_seconds": {
+          "n": 8,
+          "mean": 1.9356910249989596,
+          "median": 1.5070761499973742,
+          "min": 1.3551733999993303,
+          "max": 4.946542800000316,
+          "p90": 2.712372609998783
+        }
+      },
+      "non_speech_transcripts": 0,
+      "non_speech_stt_calls": 4,
+      "non_speech_total": 4,
+      "submitted_audio_seconds": 119.80800000000004,
+      "split_speech_clips": 0,
+      "missed_speech_clips": 0,
+      "short_replay_estimate_seconds": {
+        "n": 16,
+        "mean": 7.0543439187500026,
+        "median": 6.423463150000127,
+        "min": 6.318772799999162,
+        "max": 10.086520200000262,
+        "p90": 9.802490300000311
+      },
+      "repeated_model_load_seconds": {
+        "n": 28,
+        "mean": 0.701667357142469,
+        "median": 0.6889387000010174,
+        "min": 0.6416718000000401,
+        "max": 0.8796242999997048,
+        "p90": 0.7455454199996894
+      }
+    },
+    "reverse": {
+      "n": 24,
+      "reference_characters": 511,
+      "edits": 58,
+      "cer": 0.11350293542074363,
+      "exact_matches": 8,
+      "question_samples": 12,
+      "missing_questions": 6,
+      "inserted_questions": 0,
+      "processing_seconds": {
+        "n": 24,
+        "mean": 5.152320983332932,
+        "median": 4.701156799999808,
+        "min": 3.0256731000008585,
+        "max": 8.851032300000952,
+        "p90": 8.199294360000568
+      },
+      "short": {
+        "n": 16,
+        "reference_characters": 229,
+        "edits": 38,
+        "cer": 0.16593886462882096,
+        "exact_matches": 5,
+        "question_samples": 8,
+        "missing_questions": 4,
+        "inserted_questions": 0,
+        "processing_seconds": {
+          "n": 16,
+          "mean": 4.055159099999628,
+          "median": 3.942048449998765,
+          "min": 3.0256731000008585,
+          "max": 5.089669400003913,
+          "p90": 4.762961399997948
+        }
+      },
+      "long": {
+        "n": 8,
+        "reference_characters": 282,
+        "edits": 20,
+        "cer": 0.07092198581560284,
+        "exact_matches": 3,
+        "question_samples": 4,
+        "missing_questions": 2,
+        "inserted_questions": 0,
+        "processing_seconds": {
+          "n": 8,
+          "mean": 7.346644749999541,
+          "median": 7.562940999998318,
+          "min": 5.640974899997673,
+          "max": 8.851032300000952,
+          "p90": 8.492738840000674
+        }
+      },
+      "first_submission_all": {
+        "n": 24,
+        "reference_characters": 511,
+        "edits": 110,
+        "cer": 0.21526418786692758,
+        "exact_matches": 7,
+        "question_samples": 12,
+        "missing_questions": 7,
+        "inserted_questions": 0,
+        "processing_seconds": {
+          "n": 24,
+          "mean": 5.152320983332932,
+          "median": 4.701156799999808,
+          "min": 3.0256731000008585,
+          "max": 8.851032300000952,
+          "p90": 8.199294360000568
+        }
+      },
+      "first_submission_short": {
+        "n": 16,
+        "reference_characters": 229,
+        "edits": 38,
+        "cer": 0.16593886462882096,
+        "exact_matches": 5,
+        "question_samples": 8,
+        "missing_questions": 4,
+        "inserted_questions": 0,
+        "processing_seconds": {
+          "n": 16,
+          "mean": 4.055159099999628,
+          "median": 3.942048449998765,
+          "min": 3.0256731000008585,
+          "max": 5.089669400003913,
+          "p90": 4.762961399997948
+        }
+      },
+      "first_submission_long": {
+        "n": 8,
+        "reference_characters": 282,
+        "edits": 72,
+        "cer": 0.2553191489361702,
+        "exact_matches": 2,
+        "question_samples": 4,
+        "missing_questions": 3,
+        "inserted_questions": 0,
+        "processing_seconds": {
+          "n": 8,
+          "mean": 7.346644749999541,
+          "median": 7.562940999998318,
+          "min": 5.640974899997673,
+          "max": 8.851032300000952,
+          "p90": 8.492738840000674
+        }
+      },
+      "non_speech_transcripts": 0,
+      "non_speech_stt_calls": 0,
+      "non_speech_total": 4,
+      "submitted_audio_seconds": 91.39200000000001,
+      "split_speech_clips": 3,
+      "missed_speech_clips": 0,
+      "short_replay_estimate_seconds": {
+        "n": 16,
+        "mean": 7.285159099999628,
+        "median": 6.899514500000762,
+        "min": 5.297673100000859,
+        "max": 9.952215699998867,
+        "p90": 9.25227530000225
+      }
+    }
+  },
+  "rag": {
+    "fixtures": 6,
+    "paraphrase_hits": 6,
+    "same_text_hits": 6,
+    "negative_matches": 0,
+    "search_seconds": {
+      "n": 18,
+      "mean": 0.01962801111161146,
+      "median": 0.019683700002133264,
+      "min": 0.015488500001083594,
+      "max": 0.02295130000129575,
+      "p90": 0.022148269999524926
+    },
+    "first_save_seconds": 10.241375599998719,
+    "warm_save_seconds": {
+      "n": 5,
+      "mean": 0.029819100000167964,
+      "median": 0.02924400000119931,
+      "min": 0.02705480000076932,
+      "max": 0.03355779999765218,
+      "p90": 0.03277727999884519
+    },
+    "database_bytes": 65536,
+    "generation": {
+      "legacy": {
+        "n": 4,
+        "fact_hits": 0,
+        "errors": 0
+      },
+      "reverse": {
+        "n": 4,
+        "fact_hits": 4,
+        "errors": 0
+      }
+    }
+  },
+  "stt_samples": [
+    {
+      "id": "eval_clean/KsponSpeech_E00286.pcm",
+      "seconds": 4.435,
+      "trailing_bytes_removed": 1,
+      "sha256": "fdd16cf208d8ef655df69f537a13eec60c4236ae55a78c46334f6be1745e329e"
+    },
+    {
+      "id": "eval_clean/KsponSpeech_E02830.pcm",
+      "seconds": 8.655,
+      "trailing_bytes_removed": 1,
+      "sha256": "8406f62c49b49b449ee431757c692b38521584ba2e28dc1d094438fec5fda23f"
+    },
+    {
+      "id": "eval_clean/KsponSpeech_E01368.pcm",
+      "seconds": 5.543,
+      "trailing_bytes_removed": 1,
+      "sha256": "4fc74be5183bc43fe73ac58a1d8d2dbda1967072c2e75f45229923d294284366"
+    },
+    {
+      "id": "eval_clean/KsponSpeech_E01466.pcm",
+      "seconds": 3.434,
+      "trailing_bytes_removed": 1,
+      "sha256": "aa30e2f4adb246bd658a5b99d40b45285f2c18465f581783fa49c0702538e783"
+    },
+    {
+      "id": "eval_clean/KsponSpeech_E00749.pcm",
+      "seconds": 2.528,
+      "trailing_bytes_removed": 1,
+      "sha256": "1c15722a53371df7cc618cc0935b47ea7a6b4dd01ddbb4bc87049e0a695cd1b0"
+    },
+    {
+      "id": "eval_clean/KsponSpeech_E02533.pcm",
+      "seconds": 2.725,
+      "trailing_bytes_removed": 1,
+      "sha256": "2e555b9455818afba90e56adac0609439d0211bcdb8a1403f7c5025042c2fdef"
+    },
+    {
+      "id": "eval_clean/KsponSpeech_E01046.pcm",
+      "seconds": 7.697,
+      "trailing_bytes_removed": 1,
+      "sha256": "0b1640de109a30e02f6fd57aaa5a7caf38de37ca901a021249409ce7059bf6d1"
+    },
+    {
+      "id": "eval_clean/KsponSpeech_E01001.pcm",
+      "seconds": 1.629,
+      "trailing_bytes_removed": 1,
+      "sha256": "bf63b69a7a2d2a537ff2adf400694d491cf16d531e76e47008a07602c99a79fd"
+    },
+    {
+      "id": "eval_clean/KsponSpeech_E01852.pcm",
+      "seconds": 6.425,
+      "trailing_bytes_removed": 1,
+      "sha256": "c6d9c32d9b5d39f611cc91e7cfba9da3e02aa098c57f4195d6ced7a4daa7b676"
+    },
+    {
+      "id": "eval_clean/KsponSpeech_E01933.pcm",
+      "seconds": 2.054,
+      "trailing_bytes_removed": 1,
+      "sha256": "c9ced8a6ec6ac8dcd1cc0b59f43044fdbc78852ee5599475360b8611c822e7e5"
+    },
+    {
+      "id": "eval_clean/KsponSpeech_E02763.pcm",
+      "seconds": 2.618,
+      "trailing_bytes_removed": 1,
+      "sha256": "368294faf3985500118545c7ae5da9facb7ffc7d8f65b25dfd555ce6610a32a0"
+    },
+    {
+      "id": "eval_clean/KsponSpeech_E00760.pcm",
+      "seconds": 2.298,
+      "trailing_bytes_removed": 1,
+      "sha256": "aa17775734bc0b2e84436f4bc3cdb47affc456a9714f0f74e09f6df7dc6e7bfb"
+    },
+    {
+      "id": "eval_clean/KsponSpeech_E00492.pcm",
+      "seconds": 2.563,
+      "trailing_bytes_removed": 1,
+      "sha256": "ff8234e774aacf79bb6285eb1d13023db7f63d862c6233f73c7b3e5c1ee61481"
+    },
+    {
+      "id": "eval_clean/KsponSpeech_E02986.pcm",
+      "seconds": 2.591,
+      "trailing_bytes_removed": 1,
+      "sha256": "0575d37e35404d7d6db41284f10fed8a9533e898f2e06e94762648afa9642157"
+    },
+    {
+      "id": "eval_clean/KsponSpeech_E01059.pcm",
+      "seconds": 3.786,
+      "trailing_bytes_removed": 1,
+      "sha256": "18e3f3ed33f5dc93258bb9e6abb88a8b6bae266f8c30fbe02a75b8ea58701c5c"
+    },
+    {
+      "id": "eval_clean/KsponSpeech_E02585.pcm",
+      "seconds": 8.882,
+      "trailing_bytes_removed": 1,
+      "sha256": "ffb5bda915dc1ae9590af245679fecdebbcc51b6d73d234e5a573a4e20a1a4a5"
+    },
+    {
+      "id": "eval_clean/KsponSpeech_E02556.pcm",
+      "seconds": 1.898,
+      "trailing_bytes_removed": 1,
+      "sha256": "efaad31b85ea6f3f89c9849c5ffea8ea83d955db9ac1dd1cbc0ee769da573170"
+    },
+    {
+      "id": "eval_clean/KsponSpeech_E01885.pcm",
+      "seconds": 8.5,
+      "trailing_bytes_removed": 1,
+      "sha256": "c2003258189157eefaa69164aa44e37d4b1c197543fabc9f629a39d6af30b400"
+    },
+    {
+      "id": "eval_clean/KsponSpeech_E01743.pcm",
+      "seconds": 1.733,
+      "trailing_bytes_removed": 1,
+      "sha256": "ac77b377fc5b3de4cd3169440be0a6e4226aa365bc0662b33b824469fca2feb0"
+    },
+    {
+      "id": "eval_clean/KsponSpeech_E02435.pcm",
+      "seconds": 2.239,
+      "trailing_bytes_removed": 1,
+      "sha256": "e644fcaeb5d3d4c986c5cf3876ec9dd4d3ba8a81415d0ecea5982800ec6e326e"
+    },
+    {
+      "id": "eval_clean/KsponSpeech_E02492.pcm",
+      "seconds": 6.147,
+      "trailing_bytes_removed": 1,
+      "sha256": "ee31b705ac0fff9dd55855f877b24bc14ec4a3abbbfcaeb56c7cd4f90366bf4c"
+    },
+    {
+      "id": "eval_clean/KsponSpeech_E02198.pcm",
+      "seconds": 1.861,
+      "trailing_bytes_removed": 1,
+      "sha256": "97dd5e42d07cd20de6daa1147c9013854e99b250fc60c9f7a532d62e270b0b16"
+    },
+    {
+      "id": "eval_clean/KsponSpeech_E00758.pcm",
+      "seconds": 6.944,
+      "trailing_bytes_removed": 1,
+      "sha256": "f74fb3ff6585abbf7b2d611b77fb19dcd99b376d6bf8932fa82cea1634de8002"
+    },
+    {
+      "id": "eval_clean/KsponSpeech_E01338.pcm",
+      "seconds": 2.551,
+      "trailing_bytes_removed": 1,
+      "sha256": "bcbcde85b88021a6739361a831c2b59b198ad8c8ab61f11853903498aaa58e2e"
+    }
+  ]
+}
