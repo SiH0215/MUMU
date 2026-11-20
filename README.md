@@ -8,6 +8,8 @@
 
 보완 과정은 [개발일지](dev-notes/DEV_LOG.md)에서 확인할 수 있습니다.
 
+개선결과는 [개선결과](docs/IMPROVEMENTS.md)에서 확인할 수 있습니다.
+
 # MUMU - 대화를 위한 챗봇
 
 ## 1. 기획 의도
