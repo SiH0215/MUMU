@@ -6,7 +6,9 @@
 
 [프로젝트 소개](../README.md) · [MUMU legacy](../legacy/README.md) · [개발일지](../dev-notes/DEV_LOG.md)
 
-동일 입력으로 추가 측정한 응답 시간·토큰·CER·RAG 결과는 [비교 측정 결과](BENCHMARK_RESULTS.md)에 정리하였습니다. 이번 원본 무무는 Gemini로 교체한 버전으로, 아래의 기존 체감 대기 시간 비교와 조건을 구분하였습니다.
+동일 입력으로 추가 측정한 응답 시간·토큰·CER·RAG 결과는 [비교 측정 결과](BENCHMARK_RESULTS.md)에 정리하였습니다.
+개발 당시 원본 무무는 watsonx.ai를 통해 Llama-4-Maverick을 사용하였습니다.
+이후 계정 권한이 만료되고 기존 모델과 유사 모델의 이용이 어려워져, 비교 측정에서는 개선 무무와 동일한 Gemini-4-Flash-Lite를 사용하였습니다.
 
 <br><br>
 
