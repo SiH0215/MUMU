@@ -1,4 +1,0 @@
--r requirements.txt
-openai-whisper
-silero-vad
-sounddevice
