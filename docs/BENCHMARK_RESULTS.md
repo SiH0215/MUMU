@@ -1,6 +1,6 @@
 # MUMU 비교 측정 결과
 
-[개선 결과](IMPROVEMENTS.md) · [개발일지](../dev-notes/DEV_LOG.md) · [측정값 JSON](../experiments/results/2026-11-20/summary.json)
+[개선 결과](IMPROVEMENTS.md) · [개발일지](../dev-notes/DEV_LOG.md)
 
 <br><br>
 
