@@ -64,20 +64,6 @@
 
 ## 3. 대화 방식
 
-### 가볍게 시작하기
-
-같은 ‘안녕?’ 입력에 대해 기존 화면에서는 반가움과 함께 하루를 돌아보는 질문을 연달아 전달하였습니다. 개선 화면에서는 짧은 인사와 현재 상황을 묻는 질문 하나로 대화를 시작하였습니다.
-
-<table>
-  <tr><th>기존</th><th>개선</th></tr>
-  <tr>
-    <td valign="top"><img src="images/improvements/before-greeting.png" alt="기존 무무 인사" width="320"></td>
-    <td valign="top"><img src="images/improvements/after-greeting.png" alt="개선한 무무 인사" width="320"></td>
-  </tr>
-</table>
-
-<br>
-
 ### 사용자가 꺼낸 주제 안에서 이어가기
 
 ‘일하다가 잠깐 쉬고 있다’는 상황에서 기존 답변은 긴 공감과 격려에 이어 퇴근 후 할 일이나 저녁 음식으로 화제를 전환하였습니다. 개선 답변은 쉬는 시간과 곧 다시 시작할 일에 집중하여 짧게 반응하였습니다.
